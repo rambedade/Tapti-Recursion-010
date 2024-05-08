@@ -5,6 +5,31 @@ let userURL = "https://tapti-recursion-010-v93f.onrender.com/users";
 
 submitLogin.addEventListener("click", verifyUserData);
 
-await function verifyUserData(){
+async function verifyUserData(){
+    if(email.value && password.value){
+        try{
+            let res = await fetch(userURL);
+            let data = await res.json();
+            let flag = false;
+            data.forEach(element => {
+                if(element.email == userEmail.value && element.password == userPassword.value){
+                    alert(`Welcome ${element.name}!`);
+                    localStorage.setItem("loggedIn",element.name);
 
+                }
+                else{
+                    alert("Email or Password is Invalid");
+                }
+            });
+            console.log(data);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    else{
+        alert("Please enter all the field first!");
+    }
 }
+
+// verifyUserData()
