@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Airbnb - Sign Up</title>
     <link rel="stylesheet" href="styles/signup.css">
 </head>
+
 <body>
-    <!-- id = user_name -->
-    <!-- id user_email -->
-    <!-- id= user_password -->
-    <!-- id submit-signup -->
+    <div class="container">
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="user_name">Name:</label>
+                    <input type="text" id="user_name" name="user_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="user_email">Email:</label>
+                    <input type="email" id="user_email" name="user_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="user_password">Password:</label>
+                    <input type="password" id="user_password" name="user_password" required>
+                </div>
+                <button type="submit" id="submit-signup" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/signup.js"></script>
 </body>
-<script src="scripts/signup.js"></script>
 </html>
