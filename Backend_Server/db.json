@@ -1,5 +1,12 @@
 {
-    "users":[],
+    "users":[  
+        {
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "password": "admin@123",
+    "id": 1
+      }
+    ],
     "data":[
         {
           "id": "8450130",
