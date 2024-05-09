@@ -11,7 +11,7 @@
 <body class="bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center h-screen">
     <div class="bg-white dark:bg-zinc-900 p-8 rounded-lg shadow-lg max-w-md w-full">
         <h2 class="text-2xl font-bold mb-6 text-center">Sign up</h2>
-        <form>
+        <form id="signup-form" method="post">
             <div class="mb-4">
                 <label class="block text-zinc-700 dark:text-zinc-300 text-sm font-bold mb-2" for="user_name">
                     Your Name
@@ -34,7 +34,7 @@
                 </label>
                 <input
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 dark:text-zinc-300 dark:bg-zinc-800 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    id="user_password" type="password" placeholder="********" />
+                    id="user_password" type="password" placeholder="Password must contain at least 6 character(s)" />
             </div>
             <div class="mb-4">
                 <label class="block text-zinc-700 dark:text-zinc-300 text-sm font-bold mb-2"
@@ -57,6 +57,7 @@
                     type="button">
                     Register
                 </button>
+                <div id="loading"></div>
                 <a
                     class="inline-block align-baseline font-bold text-sm text-blue-500 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500"
                     href="#">
