@@ -6,7 +6,7 @@ let userURL = "https://tapti-recursion-010-v93f.onrender.com/users";
 submitLogin.addEventListener("click", verifyUserData);
 
 async function verifyUserData(){
-    if(email.value && password.value){
+    if(userEmail.value && userPassword.value){
         try{
             let res = await fetch(userURL);
             let data = await res.json();

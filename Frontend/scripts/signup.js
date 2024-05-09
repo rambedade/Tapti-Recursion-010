@@ -8,7 +8,7 @@ submitSignup.addEventListener("click", sendUserData)
 async function sendUserData(){
 
     let newObj = {"name": userName.value,
-                    "email":email.value,
+                    "email":userEmail.value,
                     "password":userPassword.value,
     };
     // let dummyObj = {"name": "admin",
@@ -22,7 +22,7 @@ async function sendUserData(){
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(dummyObj),
+            body: JSON.stringify(newObj),
         });
         alert("Login Successful")
     }
