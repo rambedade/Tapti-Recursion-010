@@ -228,4 +228,45 @@ background: linear-gradient(160deg, rgba(231,32,80,1) 81%, rgba(249,123,148,1) 6
   background-color: rgb(230, 227, 227);
 }
 #dropdown{
+}#footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: rgb(246, 247, 246);
+}
+#footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tags:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#footer p,
+span {
+  font-family: "Montserrat", sans-serif;
+}
+#bottom {
+  display: flex;
+  justify-content: space-around;
+  gap: 292px;
+  padding: 30px;
+  background-color: rgb(246, 247, 246);
+}
+#bottom > div:nth-last-of-type(1) {
+  display: flex;
+  gap: 15px;
+}
+
+#bottom > div:nth-last-of-type(2) {
+  display: flex;
+  gap: 5px;
+}
+#bottom > div:nth-last-of-type(2) > span:nth-of-type(n + 1):hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
