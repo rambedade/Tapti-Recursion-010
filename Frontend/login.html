@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="Refresh" content="5; URL=index.html" /> -->
     <title>Login</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/login.css">
   </head>
 
   <body class="bg-zinc-100 flex items-center justify-center h-screen">
@@ -24,7 +24,7 @@
       </div>
 
       <div class="md:w-1/2 max-w-md px-4">
-        <h2 class="text-2xl font-bold mb-6 text-zinc-800 dark:text-white">
+        <h2 id="signin-title" class="text-2xl font-bold mb-6 text-zinc-800 dark:text-white">
           Sign in
         </h2>
         <form id="login-form" method="POST">
@@ -58,7 +58,7 @@
               placeholder="Password must contain at least 6 character(s)"
             />
           </div>
-
+          <div id="loading"></div>
           <div class="flex items-center justify-between">
             <button
               class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:bg-red-700 dark:hover:bg-red-900"
@@ -67,12 +67,12 @@
             >
               Log in
             </button>
-            <div id="loading"></div>
-            <p
+            
+            <a
               class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500"
-            >
+            href="signup.html">
               Don't have an account? Signup
-            </p>
+        </a>
           </div>
         </form>
         <p class="text-center my-4 dark:text-zinc-300">Or login with</p>

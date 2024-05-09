@@ -46,8 +46,9 @@ async function sendUserData(){
         
         showLoading()
         if(userPassword.value.length < 5) alert("Password must contain at least 6 characters")
+        else if(userPasswordConfirm.value != userPassword.value) alert("Password didn't match");
         else if(await verifyUserData()) alert(`User Email is already registered!`);
-        else if(userPasswordConfirm.value == userPassword.value){
+        else{
             
             let newObj = {"name": userName.value,
                     "email":userEmail.value,
@@ -69,14 +70,12 @@ async function sendUserData(){
             catch(err){
                 console.log(err);
             }
-            stopLoading();
-        }
-        else{
-            alert("Password didn't match");
         }
     }
     else{
         alert("Fill all the fields")
     }
+    stopLoading();
+
     
 }
