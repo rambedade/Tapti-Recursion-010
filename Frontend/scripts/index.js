@@ -1,18 +1,18 @@
 
+const menuIcon = document.querySelector('.button-icons');
+const dropdownMenu = document.getElementById('dropdownMenu');
 
-
-
-
-// const menuIcon = document.querySelector('.button-icons');
-// const dropdownMenu = document.getElementById('dropdownMenu');
-
-// menuIcon.addEventListener('click', function() {
-//   dropdownMenu.classList.toggle('show');
-// });
+menuIcon.addEventListener('click', function() {
+  dropdownMenu.classList.toggle('show');
+});
 // HIMANSHU------>>
 let cont=document.getElementById("cards")
 function createCards(det){
     let card=document.createElement("div");
+    card.addEventListener("click",()=>{
+      localStorage.setItem("currCard", det.id);
+      window.location.assign("product.html")
+    })
     let carousel =document.createElement("div");
     let details=document.createElement("div")
     card.classList.add("c1");
@@ -85,8 +85,23 @@ async function fetchData(url){
   }
 }
 fetchData("https://tapti-recursion-010-v93f.onrender.com/data")
+// Rameshwar /
 
+document.addEventListener("DOMContentLoaded", function() {
+    var popularDropdown = document.getElementById("popularDropdown");
+    popularDropdown.classList.add("active");
+    var popularContent = popularDropdown.querySelector(".dropdown-content");
+    popularContent.style.display = "block";
 
-
-
-// 
+    var dropdowns = document.querySelectorAll(".dropdown");
+    dropdowns.forEach(function(dropdown) {
+        dropdown.addEventListener("click", function() {
+            var currentContent = document.querySelector(".dropdown.active .dropdown-content");
+            if (currentContent && currentContent.parentElement !== this) {
+                currentContent.parentElement.classList.remove("active");
+                currentContent.style.display = "none";
+            }
+            this.classList.toggle("active");
+        });
+    });
+});

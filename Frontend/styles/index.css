@@ -321,3 +321,60 @@ gap: 25px;
   }
 }
 /* For standard mobile screens */
+
+/* Rameshwar Section */
+#gateways{
+  height: auto;
+  height: 400px;
+  background-color: rgb(246, 247, 246);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  /* z-index: 1; */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 5px;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Thick black line below each title */
+.dropdown.active span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  margin-top: 3px;
+}
+
+/* Horizontal line below title's row */
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 10px 0;
+}
