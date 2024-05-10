@@ -1,159 +1,152 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
-#navbar{
-      width: 100%;
+
+#container {
+  max-width: 1520px;
+  width: 100%;
+  margin: auto;
 }
+
+#navbar {
+  width: 100%;
+}
+
 body {
   width: 100%;
 }
-.top
-{
-    display: flex;
-    height: 60px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #222222;
-    
+
+.top {
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222;
+
 }
 
-.top-text
-{
-    color: #b3b3b3;
-    text-decoration: underline;
-    font-family: 'airbnb-light';
-    font-size: 15px;
+.top-text {
+  color: #b3b3b3;
+  text-decoration: underline;
+  font-family: 'airbnb-light';
+  font-size: 15px;
 }
 
-.top-text:hover
-{
-    color: #898989;
-    cursor: pointer;
+.top-text:hover {
+  color: #898989;
+  cursor: pointer;
 }
 
-.background
-{
-    height: 560px;
-    background-image: url('../images/background.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left center;
+.background {
+  height: 560px;
+  background-image: url('../images/background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
 }
 
-.menu-container
-{
-    display: flex;
-    flex-direction: center;
-    align-items: center;
-    height: 80px;
+.menu-container {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  height: 80px;
 }
 
-.menu-flex
-{
-    flex: 1
+.menu-flex {
+  flex: 1
 }
 
-.logo
-{
-    margin-left: 80px;
+.logo {
+  margin-left: 80px;
 }
 
-.menus
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.item-menu
-{
-    font-family: "airbnb-light";
-    font-weight: 500;
-    font-size: 17px;
-    cursor: pointer;
+.item-menu {
+  font-family: "airbnb-light";
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
 }
 
-.right-menu-item
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.right-menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu-button
-{   
-    background-color: transparent;
-    color: #222222;
-    font-family: 'airbnb-light';
-    padding: 12px 15px;
-    border: 0;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 600;
+.menu-button {
+  background-color: transparent;
+  color: #222222;
+  font-family: 'airbnb-light';
+  padding: 12px 15px;
+  border: 0;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.menu-button:hover
-{
-    background-color: #F7F7F7;
-    cursor: pointer;
+.menu-button:hover {
+  background-color: #F7F7F7;
+  cursor: pointer;
 }
 
-.menu-globe
-{
-    background-color: transparent;
-    border: 0;
-    padding: 10px;
-    border-radius: 50%;
-    margin-right: 10px;
+.menu-globe {
+  background-color: transparent;
+  border: 0;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.menu-globe:hover
-{
-    cursor: pointer;
-    background-color: #F7F7F7;
+.menu-globe:hover {
+  cursor: pointer;
+  background-color: #F7F7F7;
 }
 
-.globe
-{
-    font-size: 20px !important;
+.globe {
+  font-size: 20px !important;
 }
 
-.button-icons
-{
-    background-color: #F7F7F7;
-    color: grey;
-    font-family: 'airbnb-light';
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px 10px;
-    border: 0;
-    border-radius: 25px;    
-    display: flex;
-    align-items: center;
+.button-icons {
+  background-color: #F7F7F7;
+  color: grey;
+  font-family: 'airbnb-light';
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
 }
-.menus .item-menu:nth-child(1){
+
+.menus .item-menu:nth-child(1) {
   font-weight: 400;
 }
-.button-icons:hover
-{
-    cursor: pointer;
+
+.button-icons:hover {
+  cursor: pointer;
 }
 
-.iconMenu
-{
-    font-size: 20px !important;
-    margin-right: 5px !important;
+.iconMenu {
+  font-size: 20px !important;
+  margin-right: 5px !important;
 }
 
-.iconUser
-{
-    font-size: 30px !important;
+.iconUser {
+  font-size: 30px !important;
 }
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -166,18 +159,20 @@ body {
   border-radius: 50px;
   box-shadow: 1px 1px 1px 1px rgba(11, 0, 0, 0.297);
 }
-.search-bar form{
+
+.search-bar form {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -198,32 +193,34 @@ body {
   margin-top: 35px;
 }
 
-.search-bar form input{
+.search-bar form input {
   display: block;
-  border: 0;  
+  border: 0;
   outline: none;
   background: transparent;
 }
-.search-bar form button{
+
+.search-bar form button {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: rgb(255,255,255);
-background: linear-gradient(160deg, rgba(231,32,80,1) 81%, rgba(249,123,148,1) 60%, rgba(231,32,80,1) 81%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(160deg, rgba(231, 32, 80, 1) 81%, rgba(249, 123, 148, 1) 60%, rgba(231, 32, 80, 1) 81%);
 }
- .where{
+
+.where {
   flex: 1;
 
 }
-.search-bar :nth-child(4){
-  
-}
 
-.search-bar form label{
-  
+.search-bar :nth-child(4) {}
+
+.search-bar form label {
+
   font-weight: 600;
 }
-.search-bar form :hover{
+
+.search-bar form :hover {
   border-radius: 50px;
   background-color: rgb(230, 227, 227);
 }
@@ -240,18 +237,22 @@ background: linear-gradient(160deg, rgba(231,32,80,1) 81%, rgba(249,123,148,1) 6
   padding-bottom: 50px;
   background-color: rgb(246, 247, 246);
 }
+
 #footer div {
   display: flex;
   flex-direction: column;
   gap:20px;
 }
+
 .tags:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
 #footer p,span {
   font-family: "Montserrat", sans-serif;
 }
+
 #bottom {
   display: flex;
   justify-content: space-around;
@@ -259,16 +260,18 @@ background: linear-gradient(160deg, rgba(231,32,80,1) 81%, rgba(249,123,148,1) 6
   padding: 30px;
   background-color: rgb(246, 247, 246);
 }
-#bottom > div:nth-last-of-type(1) {
+
+#bottom>div:nth-last-of-type(1) {
   display: flex;
   gap: 15px;
 }
 
-#bottom > div:nth-last-of-type(2) {
+#bottom>div:nth-last-of-type(2) {
   display: flex;
   gap: 5px;
 }
-#bottom > div:nth-last-of-type(2) > span:nth-of-type(n + 1):hover {
+
+#bottom>div:nth-last-of-type(2)>span:nth-of-type(n + 1):hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -323,7 +326,7 @@ gap: 25px;
 /* For standard mobile screens */
 
 /* Rameshwar Section */
-#gateways{
+#gateways {
   height: auto;
   height: 400px;
   background-color: rgb(246, 247, 246);
@@ -337,13 +340,13 @@ gap: 25px;
 }
 
 .dropdown-content {
-  
+
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   /* z-index: 1; */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
 }
 

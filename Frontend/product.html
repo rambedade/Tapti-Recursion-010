@@ -5,26 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e408c805cc.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container">
-        <nav></nav>
-        <div id="main-section">
-            <div id="left-main">
-                <div id="flat-title"></div>
-                <div id="flat-images"></div>
-                <div id="flat-details"></div>
-                <div id="host"></div>
-                <div id="features"></div>
-                <div id="discription"></div>
-                <div id="where-sleep"></div>
-            </div>
-            <div id="right-main"></div>
-        </div>
-        <div></div>
-        <footer></footer>
-    </div>
 
+
+    <div id="container">
+      <nav id="navbar"></nav>
+      <div id="flat-title"></div>
+      <div id="flat-images"></div>
+      <div id="main-section">
+        <div id="left-main">
+          <div id="flat-details"></div>
+          <div id="host"></div>
+          <div id="features">
+            <div class="feature">
+              <div>
+                <img src="assets/feat1.png" alt="" />
+                <h3>Dedicated workspace</h3>
+              </div>
+              <div>A common area with wifi that’s well suited for working.</div>
+            </div>
+            <div class="feature">
+              <div>
+                <img src="assets/feat2.png" alt="" />
+                <h3>Self check-in</h3>
+              </div>
+              <div>You can check in with the building staff.</div>
+            </div>
+            <div class="feature">
+              <div>
+                <img src="assets/feat3.png" alt="" />
+                <h3>Free cancellation for 48 hours</h3>
+              </div>
+              <div>Get a full refund if you change your mind.</div>
+            </div>
+          </div>
+          <div id="discription">
+            <h3>About this place</h3>
+            <p id="disc-sect"></p>
+          </div>
+          <div id="place-offer">
+            <h3>What this place offers</h3>
+            <ul>
+              <li>Lock on bedroom door</li>
+              <li>Garden view</li>
+              <li>Dedicated workspace</li>
+            </ul>
+          </div>
+        </div>
+        <div id="right-main">
+          <div id="reserve">
+            <div id="flat-price"></div>
+            <div id="duration">
+              <div id="check-in">
+                <label for="check-in"> Check-in:</label>
+                <input type="datetime-local" />
+              </div>
+              <div id="check-out">
+                <label for="check-out">Check-out:</label>
+                <input type="datetime-local" />
+              </div>
+            </div>
+            <div id="guests"></div>
+            <button>Reserve</button>
+          </div>
+        </div>
+      </div>
+      <div id="where-be"></div>
+      <div id=""></div>
+      <footer id="footer"></footer>
+    </div>
   </body>
   <script src="scripts/product.js"></script>
 </html>

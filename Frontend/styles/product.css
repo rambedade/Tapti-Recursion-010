@@ -1,0 +1,198 @@
+@import "index.css";
+#main-section {
+    display: flex;
+
+}
+
+#flat-images {
+    width: 100%;
+    display: grid;
+}
+
+
+/* Container */
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Main section */
+  #main-section {
+    display: flex;
+  }
+  
+  /* Left main section */
+  #left-main {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  /* Features section */
+  #features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Individual feature */
+  .feature {
+    flex: 1;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .feature img {
+    max-width: 100%;
+  }
+  
+  /* Description section */
+  #description {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Place offer section */
+  #place-offer {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Right main section */
+  #right-main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Reserve section */
+  #reserve {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  /* Duration section */
+#duration {
+    margin-bottom: 20px;
+  }
+  
+  #check-in,
+  #check-out {
+    margin-bottom: 10px;
+  }
+  
+  #check-in label,
+  #check-out label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #check-in input,
+  #check-out input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Guests section */
+  #guests {
+    margin-bottom: 20px;
+  }
+  
+  #guests label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #guests select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Reserve button */
+  button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e04246;
+  }
+  
+
+  /* images */
+  /* Flat images */
+#flat-images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    grid-template-areas: "";
+
+  }
+  
+  #flat-images img {
+    width: 100%;
+    border-radius: 8px;
+  }  
+
+
+
+
+
+  
+  /* Host section */
+  #host {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #host img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  /* Host details */
+  #host-details {
+    flex: 1;
+  }
+  
+  #host-details h3 {
+    margin-bottom: 5px;
+  }
+  
+  /* Description section */
+  #description {
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Place offer section */
+  #place-offer {
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Reserve section */
+  #reserve {
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
