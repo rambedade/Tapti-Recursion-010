@@ -14,21 +14,20 @@ submitSignup.addEventListener("click", sendUserData)
 
 
 async function verifyUserData(){
-    if(userEmail.value && userPassword.value){
-        try{
-            let res = await fetch(userURL);
-            let data = await res.json();
-            for(let element of data){
-                if(element.email == userEmail.value && element.password == userPassword.value){
-                    return true
-                }
-                
-            };
-        }
-        catch(err){
-            console.log(err);
-        }
+    try{
+        let res = await fetch(userURL);
+        let data = await res.json();
+        for(let element of data){
+            if(element.email == userEmail.value){
+                return true
+            }
+            
+        };
     }
+    catch(err){
+        console.log(err);
+    }
+
     return false;
     
 }
@@ -54,6 +53,7 @@ async function sendUserData(){
                     "email":userEmail.value,
                     "password":userPassword.value,
             };
+
             try{
                 await fetch(userURL,{
                     method: "POST",
