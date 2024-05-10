@@ -10,6 +10,7 @@
 body {
   width: 100%;
 }
+
 .top
 {
     display: flex;
@@ -198,6 +199,7 @@ body {
   margin-top: 35px;
 }
 
+
 .search-bar form input{
   display: block;
   border: 0;  
@@ -227,6 +229,101 @@ background: linear-gradient(160deg, rgba(231,32,80,1) 81%, rgba(249,123,148,1) 6
   border-radius: 50px;
   background-color: rgb(230, 227, 227);
 }
+#top-carousel .d-flex{
+  margin-left: 20px;
+  gap: 10px;
+}
+#top-carousel{
+  display: flex;
+}
+#top-carousel img{
+       width:2rem ;
+       height: 2rem;
+}
+#iconss {
+  margin:5px;
+  display: flex;
+  overflow-x: auto;
+}
+#iconss::-webkit-scrollbar{
+  width: 0;
+}
+#top-carousel p{
+          font-size: 0.873rem;
+          color: gray;
+          font-weight: 400;
+}
+#top-carousel p:hover{
+  font-size: 0.873rem;
+  color: rgb(16, 15, 15);
+  font-weight: 400;
+}
+#datePicker {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#datePicker input[type="datetime-local"] {
+  width: 200px;
+}
+/* Media queries for different screen sizes */
+
+/* Mobile devices (320px to 480px) */
+@media (max-width: 480px) {
+  #navbar{
+    font-size: smaller;
+    background-color: chocolate;
+   }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #navbar .menu-container .menus .item-menu{
+   font-size: 12px;
+  }
+  #navbar .menu-container .right-menu{
+    font-size: 12px;
+   }
+  
+}
+
+/* Small screens, laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .item-menu{
+  font-size: 10px;
+  gap: 5px;
+  }
+   .menu-flex .right-menu-item #btn{
+    font-size: 10px;
+   }
+   .menu-flex img{
+    width: 3cm;
+   }
+}
+
+/* Desktops, large screens (1025px and above) */
+@media (min-width: 1025px) {
+  #navbar .menu-container{
+  gap: 2px;
+
+   }
+   #navbar .menu-container .item-menu{
+  
+     }
+
+}
+
+/* Extra large screens, TV (1201px and above) */
+@media (min-width: 1201px) {
+  .item-menu,
+  .fs-6 {
+    font-size: 1.6rem; /* Adjust the font size as needed for extra large screens */
+  }
+}
+
 #dropdown{
 }#footer {
   display: flex;

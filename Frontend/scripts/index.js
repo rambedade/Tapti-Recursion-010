@@ -12,6 +12,11 @@ const dropdownMenu = document.getElementById('dropdownMenu');
 menuIcon.addEventListener('click', function() {
   dropdownMenu.classList.toggle('show');
 });
+const myCarousel = document.getElementById('top-carousel')
+
+myCarousel.addEventListener('slide.bs.carousel', event => {
+  // do something...
+})
 
 // Rameshwar /
 
