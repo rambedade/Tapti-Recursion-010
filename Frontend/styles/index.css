@@ -381,6 +381,7 @@ height: auto;
 display: flex;
 flex-wrap: wrap;
 gap: 25px;
+justify-content: center;
 
 }
 .c1 img{
