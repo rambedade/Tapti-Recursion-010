@@ -224,11 +224,12 @@ body {
   border-radius: 50px;
   background-color: rgb(230, 227, 227);
 }
-
-#dropdown {}
-
+#dropdown{
+}
+/* HIMANSHU */
 #footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   border-top: 1px grey solid;
   border-bottom: 1px grey solid;
@@ -240,7 +241,7 @@ body {
 #footer div {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap:20px;
 }
 
 .tags:hover {
@@ -248,8 +249,7 @@ body {
   cursor: pointer;
 }
 
-#footer p,
-span {
+#footer p,span {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -275,6 +275,55 @@ span {
   cursor: pointer;
   text-decoration: underline;
 }
+.c1{
+border: 1px transparent;
+width: 300px;
+height: auto;
+
+}
+#cards{
+ 
+display: flex;
+flex-wrap: wrap;
+gap: 25px;
+
+}
+.c1 img{
+  /* width: 340px !important; */
+  height: 280px !important;
+  border-radius: 8px;
+  /* background-size: cover; */
+}
+#info {
+  gap: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+#info2{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media(max-width: 1366px) and (min-width: 1024px ) {
+  /* Your styles for standard laptop screens here */
+ 
+}
+@media (max-width: 767px) and (min-width:320px) {
+  /* Your styles for standard mobile screens here */
+  #footer{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #bottom{
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+/* For standard mobile screens */
 
 /* Rameshwar Section */
 #gateways {
