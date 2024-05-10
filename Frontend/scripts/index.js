@@ -5,13 +5,7 @@ const dropdownMenu = document.getElementById('dropdownMenu');
 menuIcon.addEventListener('click', function() {
   dropdownMenu.classList.toggle('show');
 });
-<<<<<<< HEAD
-const myCarousel = document.getElementById('top-carousel')
 
-myCarousel.addEventListener('slide.bs.carousel', event => {
-  // do something...
-})
-=======
 // HIMANSHU------>>
 let cont=document.getElementById("cards")
 function createCards(det){
@@ -25,7 +19,6 @@ function createCards(det){
     card.classList.add("c1");
     carousel.classList.add("carousel");
     details.classList.add("details");
->>>>>>> 05cd6c8665bf77baa720f233e783140750523612
 
     details.innerHTML=`
     <div id="info">

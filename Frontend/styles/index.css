@@ -19,17 +19,6 @@ body {
   width: 100%;
 }
 
-<<<<<<< HEAD
-.top
-{
-    display: flex;
-    height: 60px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #222222;
-    
-=======
 .top {
   display: flex;
   height: 60px;
@@ -38,7 +27,6 @@ body {
   align-items: center;
   background-color: #222222;
 
->>>>>>> 05cd6c8665bf77baa720f233e783140750523612
 }
 
 .top-text {
@@ -205,12 +193,7 @@ body {
   margin-top: 35px;
 }
 
-<<<<<<< HEAD
-
-.search-bar form input{
-=======
 .search-bar form input {
->>>>>>> 05cd6c8665bf77baa720f233e783140750523612
   display: block;
   border: 0;
   outline: none;
