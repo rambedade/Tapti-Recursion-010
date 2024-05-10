@@ -1,0 +1,12 @@
+@import "index.css";
+#main-section {
+    display: flex;
+
+}
+
+#flat-images {
+    width: 100%;
+    display: grid;
+}
+
+#flat-images>img {}
