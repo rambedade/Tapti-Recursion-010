@@ -8,12 +8,13 @@ menuIcon.addEventListener('click', function() {
 
 // HIMANSHU------>>
 let cont=document.getElementById("cards")
+function gotoProducts(id){
+  localStorage.setItem("currCard", id);
+  window.location.assign("product.html")
+}
+
 function createCards(det){
     let card=document.createElement("div");
-    card.addEventListener("click",()=>{
-      localStorage.setItem("currCard", det.id);
-      window.location.assign("product.html")
-    })
     let carousel =document.createElement("div");
     let details=document.createElement("div")
     card.classList.add("c1");
@@ -67,8 +68,12 @@ function createCards(det){
       <span class="visually-hidden">Next</span>
     </button>
   </div>`
-    
-card.append(carousel,details);
+
+  let carousalInner = carousel.querySelector(".carousel-inner");
+  carousalInner.addEventListener("click", ()=>{gotoProducts(det.id)});
+  details.addEventListener("click", ()=>{gotoProducts(det.id)});
+  card.append(carousel,details);
+
   return card;
 }
 
