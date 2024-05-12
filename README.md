@@ -104,10 +104,10 @@ https://youtu.be/W84hCffJtCs
 
 - Responsive and dynamic website
 - User authentication
-- Admin Dashboard and CRUD Operations
+- Different Product Pages
 - Add property to favorites
 - Search and filter property using search param
-- Private routes
+
 
 ## Tech Stack
 
