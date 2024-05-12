@@ -1,10 +1,10 @@
 let productID = localStorage.getItem("currCard");
-let baseURL = "https://tapti-recursion-010-v93f.onrender.com/data";
+let URL = "https://tapti-recursion-010-v93f.onrender.com/data";
 
 console.log("script");
 async function getData(){
     try{
-        let res = await fetch(baseURL);
+        let res = await fetch(URL);
         let data = await res.json();
         for(let elem of data){
             if(elem.id == productID){
@@ -81,7 +81,7 @@ function createdPage(obj){
 }
 
 
-async function fetchIndexHTMl(){
+export async function fetchIndexHTMl(){
     let res = await fetch("index.html");
     let data = await res.text();
     let indexHTML = new DOMParser().parseFromString(data, 'text/html');
@@ -92,8 +92,41 @@ async function fetchIndexHTMl(){
     productNavbar.innerHTML = navBar.innerHTML;
     productFooter.innerHTML = footer.innerHTML;
     // console.log("Index",navBar.innerHTML);
+    
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const menuIcon = document.querySelector('.button-icons');
+    let userName = document.getElementById("userName");
+    let signupLink = document.getElementById("singupLink");
+    let loginLink = document.getElementById("loginLink");
+    let wishlistLink = document.getElementById("wishlistLink");
+    let logoutLink = document.getElementById("logoutLink");
+    let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+    let userIcon = document.getElementById("userIcon");
+    userIcon.innerText = "S";
+    if(loggedIn){
+        console.log(userIcon.innerText);
+        userIcon.classList.remove("material-icon");
+        userIcon.style.borderRadius = "50%"
+        userIcon.style.backgroundColor = "black"
+        userIcon.style.color = "white"
+        userIcon.style.padding = "0 10px 10px 10px";
+        userName.innerText = loggedIn.name;
+        signupLink.style.display = "none";
+        loginLink.style.display = "none" ;
+      }
+      else{
+        userName.style.display = "none";
+        wishlistLink.style.display = "none";
+        logoutLink.style.display = "none";
+      }
 
-}
+      logoutLink.addEventListener("click", ()=>{
+        localStorage.removeItem("loggedIn");
+      })
+    menuIcon.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('show');
+          });
+    }
 
 
 fetchIndexHTMl();
