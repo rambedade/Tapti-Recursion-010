@@ -389,6 +389,7 @@ border: 1px transparent;
 width: 300px;
 height: auto;
 position: relative;
+font-family: "Montserrat", sans-serif;
 }
 #cards{
  
@@ -397,6 +398,7 @@ flex-wrap: wrap;
 gap: 25px;
 /* position: relative;  */
 justify-content: center;
+font-family: "Montserrat", sans-serif;
 }
 
 
@@ -413,11 +415,13 @@ justify-content: center;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
 }
 
 #info2 {
   display: flex;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 }
 .favorite-button {
   position: absolute;
@@ -454,13 +458,26 @@ justify-content: center;
   #bottom {
     display: flex;
     flex-direction: column;
-
+    gap:50px;
   }
   #bottom div{
     display: flex;
     flex-direction: column;
 
   }
+  #bottom>div:nth-of-type(1)>span:nth-child(2n){
+/* visibility:collapse; */
+display: none;
+
+  }
+  /* #pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: 30px auto;
+  } */
+
 }
 
 /* For standard mobile screens */
