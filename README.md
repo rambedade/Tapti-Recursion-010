@@ -128,6 +128,13 @@ Backend :
 - JSON-server and Json-server-auth
 - used rendor.com website
 
+## How to Use
+
+To run this project locally:
+
+1. Clone this repository to your local machine.
+2. Open the `index.html` file in your preferred web browser.
+3. Explore the TaptiBnb website  experience right from your device.
 
 
 
