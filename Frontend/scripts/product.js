@@ -38,6 +38,12 @@ function createdPage(obj){
     let img3 = document.createElement("img");
     let img4 = document.createElement("img");
     let img5 = document.createElement("img");
+   img1.id = "img1";
+   img2.id = "img2";
+   img3.id = "img3";
+   img4.id = "img4";
+   img5.id = "img5";
+
     img1.src = obj.images[0];
     img2.src = obj.images[1];
     img3.src = obj.images[2];
@@ -89,3 +95,4 @@ async function fetchIndexHTMl(){
 }
 
 fetchIndexHTMl();
+
