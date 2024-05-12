@@ -22,7 +22,10 @@ function createCards(det){
     card.classList.add("c1");
     carousel.classList.add("carousel");
     details.classList.add("details");
-
+    let favbutton=document.createElement("button");
+    favbutton.innerHTML=`
+    <i class="fa-regular fa-heart fa-sm"></i>`
+    favbutton.classList.add("favorite-button");
     details.innerHTML=`
     <div id="info">
     <span>${det.name.slice(0, 20)+"..."}</span>
@@ -44,21 +47,29 @@ function createCards(det){
       <button type="button" data-bs-target="#carousel${det.id}" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
       <button type="button" data-bs-target="#carousel${det.id}" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
     </div>
+
     <div class="carousel-inner">
+    
+    
       <div class="carousel-item active">
       <img src="${det.images[0]}" class="d-block w-100 h-100" alt="First slide">
+      
       </div>
       <div class="carousel-item">
       <img src="${det.images[1]}" class="d-block w-100 h-100" alt="First slide">
+      
       </div>
       <div class="carousel-item">
       <img src="${det.images[2]}" class="d-block w-100 h-100" alt="First slide">
+      
       </div>
       <div class="carousel-item">
       <img src="${det.images[3]}" class="d-block w-100 h-100" alt="First slide">
+      
       </div>
       <div class="carousel-item">
       <img src="${det.images[4]}" class="d-block w-100 h-100" alt="First slide">
+      
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carousel${det.id}" data-bs-slide="prev">
@@ -70,11 +81,13 @@ function createCards(det){
       <span class="visually-hidden">Next</span>
     </button>
   </div>`
+    
+
 
   let carousalInner = carousel.querySelector(".carousel-inner");
   carousalInner.addEventListener("click", ()=>{gotoProducts(det.id)});
   details.addEventListener("click", ()=>{gotoProducts(det.id)});
-  card.append(carousel,details);
+  card.append(carousel,details,favbutton);
 
   return card;
 }
