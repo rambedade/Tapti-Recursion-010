@@ -54,10 +54,10 @@ function createdPage(obj){
     // flat location and review section 
     let smartLocation = document.createElement("h3");
     let smallInfo = document.createElement("div");
-    smallInfo.innerHTML = `<span>${obj.bedroom} bedroom </span>`;
-    if(obj.bathrooms >0 ) smallInfo.innerHTML += '<ul><li> Private attached bathroom<li></ul>'
+    smallInfo.innerHTML = `<span>${obj.bedrooms} bedroom </span>`;
+    if(obj.bathrooms >0 ) smallInfo.innerHTML += ',  Private attached bathroom'
     let ratings = document.createElement("div");
-    ratings.innerHTML = `<i class="fa-solid fa-star"></i> ${(obj.review_scores_rating*5*0.01).toFixed(1)} <span> ${obj.number_of_reviews} reviews </span>`
+    ratings.innerHTML = `<i class="fa-solid fa-star"></i> ${(obj.review_scores_rating*5*0.01).toFixed(1)} <span> <u>${obj.number_of_reviews} reviews</u> </span>`
     smartLocation.innerText = obj.smart_location;
     flatDetails.append(smartLocation, smallInfo, ratings);
     
