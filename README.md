@@ -136,7 +136,13 @@ To run this project locally:
 2. Open the `index.html` file in your preferred web browser.
 3. Explore the TaptiBnb website  experience right from your device.
 
+## Contributors
 
+- [Aditya Kumar Singh](https://github.com/adityaks-lts)
+- [Himanshu Rajpoot](https://github.com/HimanshuRajpoot2301)
+- [Rajnikant Keshkar](https://github.com/Rajnikantkeshkar)
+- [Rameshwar Bedade](https://github.com/rambedade)
+- [Krishna More](https://github.com/krishnadesh4466)
 
 
 
