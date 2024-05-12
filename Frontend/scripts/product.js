@@ -1,5 +1,3 @@
-localStorage.setItem("currCard", "8450130");
-
 let productID = localStorage.getItem("currCard");
 let baseURL = "https://tapti-recursion-010-v93f.onrender.com/data";
 
@@ -87,7 +85,7 @@ async function fetchIndexHTMl(){
     let productFooter = document.getElementById("footer");
     productNavbar.innerHTML = navBar.innerHTML;
     productFooter.innerHTML = footer.innerHTML;
-    console.log("Index",navBar.innerHTML);
+    // console.log("Index",navBar.innerHTML);
 }
 
 fetchIndexHTMl();
