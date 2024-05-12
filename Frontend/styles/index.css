@@ -70,7 +70,7 @@ body {
 }
 
 .item-menu {
-  font-family: "airbnb-light";
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 17px;
   cursor: pointer;
@@ -215,8 +215,7 @@ body {
   flex: 1;
 }
 
-.search-bar :nth-child(4) {
-}
+
 
 .search-bar form label {
   font-weight: 600;
@@ -279,8 +278,6 @@ body {
 
 /* Mobile devices (320px to 480px) */
 
-#dropdown {
-}
 
 /* HIMANSHU */
 #footer {
@@ -380,11 +377,65 @@ span {
 
 @media (max-width: 1366px) and (min-width: 1024px) {
   /* Your styles for standard laptop screens here */
-  #navbar .menu-container {
-    gap: 2px;
-  }
-  #navbar .menu-container .item-menu {
-  }
+  #navbar .menu-container .menus .item-menu{
+    font-size: 10px;
+
+   }
+   #navbar .menu-container .right-menu{
+     font-size: 20px;
+    }
+    .menu-button {
+      font-size: 8px;
+    }
+    .search-bar {
+        gap: 5px;
+      font-size:  8px;
+    }
+    .search-bar div{
+      margin: 5px;
+           
+
+    }
+    .search-bar button{
+      display: none;
+    }
+    .search-bar input{
+      font-size: 8px;
+    }
+  
+ 
+}
+
+@media(max-width: 1024px) and (min-width: 767px ) {
+
+  /* Your styles for standard laptop screens here */
+  #navbar .menu-container .menus .item-menu{
+    font-size: 10px;
+
+   }
+   #navbar .menu-container .right-menu{
+     font-size: 22px;
+    }
+    .menu-button {
+      font-size: 0px;
+    }
+    .search-bar {
+        gap: 5px;
+      font-size:  8px;
+    }
+    .search-bar div{
+      margin: 5px;
+           
+
+    }
+    .search-bar button{
+      display: none;
+    }
+    .search-bar input{
+      font-size: 5px;
+    }
+  
+ 
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -412,26 +463,99 @@ span {
     display: flex;
     flex-direction: column;
   }
+  .logo {
+    width: 70px;
+    margin-left: 80px;
+  }
+  
+       #navbar .menu-container .menus .item-menu{
+        font-size: 7px;
+
+       }
+       
+       #navbar .menu-container .menus div{
+display: none;
+       }
+       #navbar .menu-container .right-menu{
+         font-size: 12px;
+        }
+        .menu-button {
+          font-size: 0px;
+        }
+        .menu-globe{
+          display: none;
+        }
+        .search-bar {
+            gap: 5px;
+          font-size:  8px;
+        }
+        .search-bar div{
+          margin: 5px;
+          display: flex;
+          align-items: center; 
+               
+
+        }
+        .search-bar button{
+          display: none;
+        }
+        .search-bar input{
+          font-size: 0px;
+        }
   #bottom > div:nth-of-type(1) > span:nth-child(2n) {
     /* visibility:collapse; */
     display: none;
   }
 
-  #navbar .menu-container .menus .item-menu {
-    font-size: 10px;
-  }
-  #navbar .menu-container .right-menu {
-    font-size: 12px;
-  }
+ 
 }
+@media (max-width: 320px) and (min-width:0px) {
+  
+   
+        #navbar .menu-container .menus .item-menu{
+         display: none;
+ 
+        }
+        
+      
+        #navbar .menu-container .right-menu{
+          font-size: 10px;
+         }
+         .menu-button {
+           font-size: 0px;
+         }
+         .menu-globe{
+           display: none;
+         }
+         .search-bar {
+             gap: 5px;
+           font-size:  8px;
+         }
+         .search-bar div{
+           margin: 5px;
+           display: flex;
+           align-items: center; 
+                
+ 
+         }
+         .search-bar button{
+           display: none;
+         }
+         .search-bar input{
+           font-size: 0px;
+         }
+ }
 
 /* For standard mobile screens */
 
 /* Rameshwar Section */
-#gateways {
-  height: auto;
-  height: 400px;
+
+#gateways{
   background-color: rgb(246, 247, 246);
+  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-left: 10px;
+
 }
 
 .dropdown {
@@ -439,20 +563,36 @@ span {
   display: inline-block;
   margin-right: 20px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.dropdown.active::after {
+  width: 100%;
 }
 
 .dropdown-content {
   display: none;
-  position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
-  /* z-index: 1; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 5px;
 }
 
 .dropdown.active .dropdown-content {
   display: block;
+  position: relative;
+  margin-top: 10px;
 }
 
 .dropdown-content a {
@@ -466,14 +606,40 @@ span {
   background-color: #ddd;
 }
 
-/* Thick black line below each title */
-.dropdown.active span::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  margin-top: 3px;
+/* Horizontal line below title's row */
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 10px 0;
+}
+
+/* List section style */
+.list-section {
+  margin-top: 20px; /* Gap between horizontal line and list section */
+  overflow-x: auto; /* Horizontal scroll for small screens */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+/* List style */
+.list-section > div {
+  padding-left: 20px;
+  /* font-weight: ; */
+  display: flex;
+  gap: 20px; /* Gap between list pairs */
+  flex-wrap: wrap; /* Wrap pairs into multiple rows */
+}
+
+.list-pair {
+  flex: 0 0 auto; /* Prevents flex items from growing */
+  width: 16.66%; /* Each pair takes up 16.66% of the container width (6 pairs in a row) */
+}
+
+.list-pair > div:first-child {
+  font-weight: bold; /* First name of pair is bold */
+}
+
+.list-pair > div:last-child {
+  font-size: 13px; /* Second name of pair has smaller font size */
 }
 
 /* Horizontal line below title's row */
@@ -508,3 +674,17 @@ hr {
   align-items: center;
   gap: 20px;
 }
+
+/* CSS */
+/* Add pointer cursor to page buttons */
+#mid-page,
+#previous-page,
+#first-page,
+#last-page,
+#prev-page,
+#next-page,
+.rest-page,
+.rest-page1 {
+    cursor: pointer;
+}
+

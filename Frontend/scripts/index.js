@@ -115,23 +115,341 @@ async function fetchData(page,url){
 // Rameshwar /
 
 document.addEventListener("DOMContentLoaded", function() {
-    var popularDropdown = document.getElementById("popularDropdown");
-    popularDropdown.classList.add("active");
-    var popularContent = popularDropdown.querySelector(".dropdown-content");
-    popularContent.style.display = "block";
-
-    var dropdowns = document.querySelectorAll(".dropdown");
-    dropdowns.forEach(function(dropdown) {
-        dropdown.addEventListener("click", function() {
-            var currentContent = document.querySelector(".dropdown.active .dropdown-content");
-            if (currentContent && currentContent.parentElement !== this) {
-                currentContent.parentElement.classList.remove("active");
-                currentContent.style.display = "none";
-            }
-            this.classList.toggle("active");
-        });
-    });
+  // Show only the Popular list on page load
+  toggleList('popular');
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     document.getElementById('popularListSection').style.display = 'block';
+// });
+
+// Function to toggle list visibility
+function toggleList(listName) {
+  var lists = document.querySelectorAll('.list');
+  lists.forEach(function(list) {
+      list.style.display = 'none';
+  });
+
+  document.getElementById(listName + 'ListSection').style.display = 'flex';
+}
+
+
+// Function to add Popular list dynamically
+function addPopularList() {
+  var popularList = document.getElementById('popularListSection');
+  popularList.innerHTML = ''; // Clear previous content
+
+  // List of popular places
+  var popularPlaces = [
+      ["Canmore", "Flat rentals"],
+      ["Benalmádena", "Beach house rentals"],
+      ["Marbella", "Holiday rentals"],
+      ["Mijas", "House rentals"],
+      ["Prescott", "Pet-friendly rentals"],
+      ["Scottsdale", "Rentals with pools"],
+      ["Tucson", "Pet-friendly rentals"],
+      ["Jasper", "Cabin rentals"],
+      ["Mountain View", "Holiday rentals"],
+      ["Devonport", "Cottage rentals"],
+      ["Mallacoota", "Holiday rentals"],
+      ["Ibiza", "Holiday rentals"],
+      ["Anaheim", "House rentals"],
+      ["Monterey", "House rentals"],
+      ["Paso Robles", "Cottage rentals"],
+      ["Santa Barbara", "Cottage rentals"],
+      ["Sonoma", "Pet-friendly rentals"],
+      ["La Serena", "Holiday rentals"]
+  ];
+
+  // Add popular places to list
+  // popularPlaces.forEach(function(place) {
+  //     var pair = document.createElement('div');
+  //     pair.classList.add('list-pair');
+
+  //     var first = document.createElement('a');
+  //     first.href = '#';
+  //     first.innerText = place[0];
+  //     first.style.fontWeight = 'bold'; // Make the first name bold
+
+  //     var second = document.createElement('a');
+  //     second.href = '#';
+  //     second.innerText = place[1];
+
+  //     pair.appendChild(first);
+  //     pair.appendChild(second);
+
+  //     popularList.appendChild(pair);
+  // });
+  popularPlaces.forEach(function(place) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = `<div>${place[0]}</div><div>${place[1]}</div>`;
+
+      popularList.appendChild(pair);
+  });
+}
+
+// Add Popular list on page load
+addPopularList();
+
+
+function addArtsCultureList() {
+  var artsCultureList = document.getElementById('artsCultureListSection');
+  artsCultureList.innerHTML = ''; // Clear previous content
+
+  // List of Arts & Culture places
+  var artsCulturePlaces = [
+      ["Phoenix", "House rentals"],
+      ["Hot Springs", "Apartment rentals"],
+      ["Los Angeles", "Holiday rentals"],
+      ["San Diego", "Apartment rentals"],
+      ["San Francisco", "Holiday rentals"],
+      ["Barcelona", "Holiday rentals"],
+      ["Prague", "Holiday rentals"],
+      ["Washington", "Flat rentals"],
+      ["Keswick", "Cabin rentals"],
+      ["London", "Holiday rentals"],
+      ["Scarborough", "Holiday rentals"],
+      ["Sherwood Forest", "Cottage rentals"],
+      ["York", "Cabin rentals"],
+      ["Paris", "Apartment rentals"],
+      ["Rhodes", "Cottage rentals"],
+      ["Nashville", "Holiday rentals"],
+      ["Dublin", "Cottage rentals"],
+      ["Florence", "Villa rentals"]
+  ];
+
+  // Add Arts & Culture places to list
+  artsCulturePlaces.forEach(function(place) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = `<div>${place[0]}</div><div>${place[1]}</div>`;
+
+      artsCultureList.appendChild(pair);
+  });
+}
+
+// Add Arts & Culture list on page load
+addArtsCultureList();
+// Function to add Outdoors list dynamically
+function addOutdoorsList() {
+  var outdoorsList = document.getElementById('outdoorsListSection');
+  outdoorsList.innerHTML = ''; // Clear previous content
+
+  // List of Outdoors places
+  var outdoorsPlaces = [
+      ["Lake Martin", "Lakehouse rentals"],
+      ["Banff", "House rentals"],
+      ["Nerja", "Flat rentals"],
+      ["Greer", "Cabin rentals"],
+      ["Lake Havasu City", "House rentals"],
+      ["Lake Powell", "Holiday rentals"],
+      ["North Rim", "Holiday rentals"],
+      ["Payson", "Holiday rentals"],
+      ["Pinetop-Lakeside", "Holiday rentals"],
+      ["Red Rock", "Holiday rentals"],
+      ["Dinner Plain", "Pet-friendly rentals"],
+      ["Streaky Bay", "Holiday rentals"],
+      ["Emerald Lake", "Cabin rentals"],
+      ["Vancouver Island", "Apartment rentals"],
+      ["Victoria", "Beach house rentals"],
+      ["Idyllwild-Pine Cove", "House rentals"],
+      ["Mammoth Lakes", "Holiday rentals"],
+      ["Palm Desert", "Villa rentals"]
+  ];
+
+  // Add Outdoors places to list
+  outdoorsPlaces.forEach(function(place) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = `<div>${place[0]}</div><div>${place[1]}</div>`;
+
+      outdoorsList.appendChild(pair);
+  });
+}
+
+// Add Outdoors list on page load
+addOutdoorsList();
+
+// Function to add Mountains list dynamically
+function addMountainsList() {
+  var mountainsList = document.getElementById('mountainsListSection');
+  mountainsList.innerHTML = ''; // Clear previous content
+
+  // List of Mountains places
+  var mountainsPlaces = [
+      ["Mentone", "Holiday rentals"],
+      ["Sedona", "Apartment rentals"],
+      ["Helen", "Cabin rentals"],
+      ["Pine Mountain", "Holiday rentals"],
+      ["Stone Mountain", "Holiday rentals"],
+      ["Island Park", "Holiday rentals"],
+      ["Blue Mountains", "Chalet rentals"],
+      ["Asheville", "Rentals with pools"],
+      ["Blowing Rock", "Cabin rentals"],
+      ["Boone", "Holiday rentals"],
+      ["Hochatown", "Holiday rentals"],
+      ["Pigeon Forge", "Holiday rentals"],
+      ["Townsend", "Holiday rentals"],
+      ["Wears Valley", "Holiday rentals"],
+      ["Cabins", "Holiday rentals"]
+  ];
+
+  // Add Mountains places to list
+  mountainsPlaces.forEach(function(place) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = `<div>${place[0]}</div><div>${place[1]}</div>`;
+
+      mountainsList.appendChild(pair);
+  });
+}
+
+// Add Mountains list on page load
+addMountainsList();
+
+// Function to add Beach list dynamically
+function addBeachList() {
+  var beachList = document.getElementById('beachListSection');
+  beachList.innerHTML = ''; // Clear previous content
+
+  // List of Beach places
+  var beachPlaces = [
+      ["Dauphin Island", "Pet-friendly rentals"],
+      ["Fort Morgan", "Holiday rentals"],
+      ["Gulf Shores", "Holiday rentals"],
+      ["Bruny Island", "Holiday rentals"],
+      ["Crescent Head", "Holiday rentals"],
+      ["Gerringong", "Holiday rentals"],
+      ["Hamilton Island", "Holiday rentals"],
+      ["Lancelin", "Holiday rentals"],
+      ["Melbourne Beach", "Beach house rentals"],
+      ["Moonta Bay", "Holiday rentals"],
+      ["Ocean Grove", "Cottage rentals"],
+      ["Majorca", "Bungalow rentals"],
+      ["Big Sur", "House rentals"],
+      ["Bodega Bay", "Holiday rentals"],
+      ["Cambria", "House rentals"],
+      ["Cayucos", "Holiday rentals"],
+      ["Huntington Beach", "House rentals"],
+      ["La Jolla Shores Beach", "Holiday rentals"]
+  ];
+
+  // Add Beach places to list
+  beachPlaces.forEach(function(place) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = '<div>' + place[0] + '</div><div>' + place[1] + '</div>';
+      beachList.appendChild(pair);
+  });
+}
+
+// Call addBeachList function on page load
+addBeachList();
+
+// Function to add Unique Stays list dynamically
+function addUniqueStaysList() {
+  var uniqueStaysList = document.getElementById('uniqueStaysListSection');
+  uniqueStaysList.innerHTML = ''; // Clear previous content
+
+  // List of Unique Stays
+  var uniqueStays = [
+      ["Yurt Rentals", "United States"],
+      ["Yurt Rentals", "United Kingdom"],
+      ["Castle Rentals", "United States"],
+      ["Houseboats", "United States"],
+      ["Holiday Caravans", "United Kingdom"],
+      ["Private Island Rentals", "United States"],
+      ["Farm Houses", "United States"],
+      ["Farm Cottages", "United Kingdom"],
+      ["Cabin Rentals", "Australia"],
+      ["Luxury Cabins", "United Kingdom"],
+      ["Luxury Cabins", "United States"],
+      ["Holiday Chalets", "United Kingdom"],
+      ["Cottage Rentals", "United States"],
+      ["Holiday Cottages", "United Kingdom"],
+      ["Mansion Rentals", "United States"],
+      ["Villa Rentals", "United Kingdom"],
+      ["Holiday Bungalows", "United Kingdom"],
+      ["Bungalow Rentals", "United States"]
+  ];
+
+  // Add Unique Stays to list
+  uniqueStays.forEach(function(stay) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = '<div>' + stay[0] + '</div><div>' + stay[1] + '</div>';
+      uniqueStaysList.appendChild(pair);
+  });
+}
+
+// Call addUniqueStaysList function on page load
+addUniqueStaysList();
+
+// Function to add Things to do list dynamically
+function addThingsToDoList() {
+  var thingsToDoList = document.getElementById('thingsToDoListSection');
+  thingsToDoList.innerHTML = ''; // Clear previous content
+
+  // List of Things to do
+  var thingsToDo = [
+      ["London", "England"],
+      ["Paris", "Île-de-France"],
+      ["New York", "New York"],
+      ["Barcelona", "Catalonia"],
+      ["İstanbul", "İstanbul"],
+      ["Bali", "Indonesia"],
+      ["Amsterdam", "North Holland"],
+      ["Miami", "Florida"],
+      ["Madrid", "Community of Madrid"],
+      ["Los Angeles", "California"],
+      ["Rome", "Lazio"],
+      ["Lisbon", "Lisbon"],
+      ["Tokyo", "Tokyo"],
+      ["Vienna", "Vienna"],
+      ["Athens", "Greece"],
+      ["Prague", "Czechia"],
+      ["Orlando", "Florida"],
+      ["Cancún", "Quintana Roo"]
+  ];
+
+  // Add Things to do to list
+  thingsToDo.forEach(function(activity) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = '<div>' + activity[0] + '</div><div>' + activity[1] + '</div>';
+      thingsToDoList.appendChild(pair);
+  });
+}
+
+// Call addThingsToDoList function on page load
+addThingsToDoList();
+
+// Function to add Categories list dynamically
+function addCategoriesList() {
+  var categoriesList = document.getElementById('categoriesListSection');
+  categoriesList.innerHTML = ''; // Clear previous content
+
+  // List of Categories
+  var categories = [
+      "Amazing pools", "Arctic", "Camping", "Camper vans",
+      "Castles", "Containers", "Countryside", "Design",
+      "Earth homes", "Farms", "National parks", "Vineyards",
+      "OMG!", "Tiny homes", "Towers", "Windmills", "Luxe"
+  ];
+
+  // Add Categories to list
+  categories.forEach(function(category) {
+      var pair = document.createElement('div');
+      pair.classList.add('list-pair');
+      pair.innerHTML = '<div>' + category + '</div>';
+      categoriesList.appendChild(pair);
+  });
+}
+
+// Call addCategoriesList function on page load
+addCategoriesList();
+
 
 
 
@@ -148,8 +466,17 @@ async function pagining(page, total_data){
   rest_page.innerText = "....";
   rest_page1.innerText = "....";
 
+  next.id="next-page";
+  previous.id="previous-page";
+
   middle_page.id = "mid-page";
-  lastPage = Math.ceil(total_data/12);
+  first_page.id = "first-page";
+  last_page.id = "last-page";
+  prev_page.id = "prev-page";
+  next_page.id = "next-page";
+  rest_page.className = "rest-page";
+  rest_page1.className = "rest-page1";
+    lastPage = Math.ceil(total_data/12);
   middle_page.innerText = page;
   first_page.innerText = 1;
   last_page.innerText = lastPage;

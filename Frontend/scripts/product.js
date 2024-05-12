@@ -92,7 +92,9 @@ async function fetchIndexHTMl(){
     productNavbar.innerHTML = navBar.innerHTML;
     productFooter.innerHTML = footer.innerHTML;
     // console.log("Index",navBar.innerHTML);
+
 }
+
 
 fetchIndexHTMl();
 

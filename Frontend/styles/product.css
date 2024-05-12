@@ -258,3 +258,49 @@
     color: #242222; /* Set the text color */
     margin-bottom: 10px; /* Add margin at the bottom */
 }
+
+/* Mobile-first approach */
+
+/* Base styles */
+
+/* Add any base styles here that apply to all screen sizes */
+
+/* Media query for tablets and larger devices */
+@media screen and (min-width: 768px) {
+  /* Adjustments for tablets and larger devices */
+
+  /* Main container */
+  #container {
+    padding: 0 30px; /* Increase padding for larger screens */
+  }
+
+  /* Main section */
+  #main-section {
+    flex-direction: row; /* Display sections side by side */
+  }
+
+  /* Left main section */
+  #left-main {
+    flex: 2; /* Set flex basis */
+    padding: 20px;
+  }
+
+  /* Right main section */
+  #right-main {
+    flex: 1; /* Set flex basis */
+    padding: 20px;
+  }
+}
+
+/* Media query for desktops */
+@media screen and (min-width: 1024px) {
+  /* Adjustments for desktops */
+
+  /* Main container */
+  #container {
+    max-width: 1200px; /* Limit container width for larger screens */
+    margin: 0 auto; /* Center align container */
+  }
+}
+
+/* Additional media queries can be added as needed for larger screens */
