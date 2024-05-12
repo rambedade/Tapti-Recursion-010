@@ -39,12 +39,15 @@
                   <div class="right-menu-item">
                       <button id="btn" class="menu-button">Airbnb your Home</button>
                       <button id=" btn" class="menu-globe"><span class="material-icons globe">language</span></button>
-                      <div class="button-icons"><span class="material-icons iconMenu">menu</span> <span class="material-icons iconUser">account_circle</span>
+                      <div class="button-icons"><span class="material-icons iconMenu">menu</span> <span class="material-icons iconUser " id="userIcon">account_circle</span>
                       <div id="dropdownMenu" class="dropdown-content">
-                        <a href="./signup.html" style="font-weight: 600;">Sign up</a>
-                        <a href="./login.html">Login</a>
+                        <a id="userName"></a>
+                        <a id="singupLink" href="./signup.html" style="font-weight: 600;">Sign up</a>
+                        <a id="loginLink" href="./login.html">Login</a>
+                        <a id="wishlistLink" href="whishlist.html">Wishlist</a>
                         <a href="#">Airbnb Your Home</a>
                         <a href="#">Help Center</a>
+                        <a id="logoutLink" href="index.html">Logout</a>
 
                         </div>                      
                       </div>
@@ -383,7 +386,7 @@
       </div>
     </div>
   </body>
-  <script src="scripts/index.js"></script>
+  <script type="module" src="scripts/index.js"></script>
 </html>
 
 

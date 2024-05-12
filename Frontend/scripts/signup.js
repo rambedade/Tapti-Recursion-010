@@ -6,7 +6,7 @@ let submitSignup = document.getElementById("submit-signup");
 let terms = document.getElementById("terms");
 let loading = document.getElementById("loading");
 let userURL = "https://tapti-recursion-010-v93f.onrender.com/users";
-console.log("SCript");
+console.log("Script-Running");
 let form = document.getElementById("signup-form")
 
 form.addEventListener("submit", (e)=>{e.preventDefault});
@@ -52,6 +52,7 @@ async function sendUserData(){
             let newObj = {"name": userName.value,
                     "email":userEmail.value,
                     "password":userPassword.value,
+                    "wishlist":[],
             };
 
             try{

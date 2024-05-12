@@ -1,9 +1,10 @@
 {
     "users":[  
         {
-    "name": "admin",
+    "name": "Admin",
     "email": "admin@gmail.com",
     "password": "admin@123",
+    "wishlist":[],
     "id": 1
       }
     ],

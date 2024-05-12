@@ -1,0 +1,8 @@
+@import "index.css";
+#wishlist-title{
+    text-align: center;
+    margin: 40px 0;
+}
+#cards{
+    margin-bottom: 50px;
+}

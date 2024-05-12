@@ -15,7 +15,7 @@ function gotoProducts(id){
   window.location.assign("product.html")
 }
 
-function createCards(det){
+export function createCards(det){
     let card=document.createElement("div");
     let carousel =document.createElement("div");
     let details=document.createElement("div")
@@ -83,7 +83,16 @@ function createCards(det){
   </div>`
     
 
-
+  favbutton.addEventListener("click",()=>{
+    if(favbutton.innerHTML != `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`){
+      favbutton.innerHTML = `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`
+      addToWishlist(det.id);
+    }
+    else{
+      favbutton.innerHTML = `<i class="fa-regular fa-heart fa-sm"></i>`
+      removeFromWishlist(det.id);
+    }
+  })
   let carousalInner = carousel.querySelector(".carousel-inner");
   carousalInner.addEventListener("click", ()=>{gotoProducts(det.id)});
   details.addEventListener("click", ()=>{gotoProducts(det.id)});
@@ -91,6 +100,32 @@ function createCards(det){
 
   return card;
 }
+
+async function addToWishlist(objId){
+  let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+  if(loggedIn){
+    let wishlist = loggedIn.wishlist;
+    wishlist.push(objId);
+    localStorage.setItem("loggedIn",JSON.stringify(loggedIn));
+    try{
+      await fetch(`https://tapti-recursion-010-v93f.onrender.com/users/${loggedIn.id}`, {
+        method:"PATCH",
+        headers:{
+          'Content-Type':'application/json',
+        },
+        body: JSON.stringify({"wishlist":wishlist})
+      })
+    }
+    catch(err){
+      console.log(err);
+    }
+    }
+    else{
+      alert("You are not logged in");
+      window.location.assign("login.html");
+    }
+}
+
 var currPage = 1;
 var lastPage = 0;
 async function fetchData(page,url){
@@ -571,5 +606,33 @@ topPrevButton.addEventListener("click",()=>{
 })
 
 
+let userName = document.getElementById("userName");
+let signupLink = document.getElementById("singupLink");
+let loginLink = document.getElementById("loginLink");
+let wishlistLink = document.getElementById("wishlistLink");
+let logoutLink = document.getElementById("logoutLink");
+let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+let userIcon = document.getElementById("userIcon");
+
+if(loggedIn){
+  userIcon.innerText = loggedIn.name[0];
+  console.log(userIcon.innerText);
+  userIcon.classList.remove("material-icon");
+  userIcon.style.borderRadius = "50%"
+  userIcon.style.backgroundColor = "black"
+  userIcon.style.color = "white"
+  userIcon.style.padding = "0 10px 10px 10px";
+  userName.innerText = loggedIn.name;
+  signupLink.style.display = "none";
+  loginLink.style.display = "none" ;
+}
+else{
+  userName.style.display = "none";
+  wishlistLink.style.display = "none";
+  logoutLink.style.display = "none";
+}
+logoutLink.addEventListener("click", ()=>{
+  localStorage.removeItem("loggedIn");
+})
 fetchData(currPage,baseURL)
 
