@@ -78,8 +78,36 @@ https://youtu.be/OTSghI5dd6U
 https://youtu.be/W84hCffJtCs
 
 ## Screenshots
-Navbar
+
+![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/6fc52cef-cc00-44cc-800f-4d031f0f85df)
+
+
 ![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/9d2c9e30-2851-441c-ba87-40bc6a07dafa)
+
+
+![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/7ed28261-69c3-40c4-b5c5-acdb713ae3ce)
+
+
+![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/c6f77115-64b3-456d-a506-91d29062b825)
+
+
+![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/8946eeac-f5f0-4ba1-9912-c57858afe25f)
+
+
+![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/e1405b5c-b27d-44c5-a22e-0281a67c15cd)
+
+
+![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/54c8592a-9522-4b04-a349-3908200c085c)
+
+
+![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/055c7e5a-c935-45e1-b167-3c1bed6a8be1)
+
+
+
+
+
+
+
 
 
 
