@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #container {
@@ -563,7 +563,7 @@ display: none;
   display: inline-block;
   margin-right: 20px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600 !important;
 }
 
 .dropdown::after {
@@ -635,7 +635,7 @@ hr {
 }
 
 .list-pair > div:first-child {
-  font-weight: bold; /* First name of pair is bold */
+  font-weight: 600; /* First name of pair is bold */
 }
 
 .list-pair > div:last-child {
