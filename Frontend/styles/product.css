@@ -268,7 +268,7 @@
 /* Media query for tablets and larger devices */
 @media screen and (min-width: 768px) {
   /* Adjustments for tablets and larger devices */
-
+  
   /* Main container */
   #container {
     padding: 0 30px; /* Increase padding for larger screens */
