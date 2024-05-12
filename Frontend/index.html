@@ -20,9 +20,10 @@
     <div class="container">
       <!-- Krishna-->
       <div id="navbar">
+        
         <div class="menu-container">
           <div class="menu-flex">
-              <img src="./Screenshot 2024-05-09 232128.png" class="logo"/>
+              <img src="assets/airbnb-logo.png" class="logo"/>
           </div>
           <div class="menu-flex">
               <div class="menus">
@@ -34,8 +35,8 @@
           <div class="menu-flex">
               <div class="right-menu">
                   <div class="right-menu-item">
-                      <button class="menu-button">Airbnb your Home</button>
-                      <button class="menu-globe"><span class="material-icons globe">language</span></button>
+                      <button id="btn" class="menu-button">Airbnb your Home</button>
+                      <button id=" btn" class="menu-globe"><span class="material-icons globe">language</span></button>
                       <div class="button-icons"><span class="material-icons iconMenu">menu</span> <span class="material-icons iconUser">account_circle</span>
                       <i class="fa-solid fa-circle iconCircle"></i>
                       <div id="dropdownMenu" class="dropdown-content">
@@ -59,12 +60,20 @@
              </div>
              <div>
              <label>Check in</label>
+             <input type="datetime-local"
+               id="Test_DatetimeLocal1"
+               min="2015-01-01T00:00"
+               max="2025-12-31T23:59"
+               step="1">
 
-              <input type="text" placeholder="Add Dates">
              </div>
              <div>
              <label>Check Out</label>
-              <input type="text" placeholder="Add Dates">
+             <input type="datetime-local"
+             id="Test_DatetimeLocal2"
+             min="2015-01-01T00:00"
+             max="2025-12-31T23:59"
+             step="1">
              </div>
              <div>
               <label>Who</label>
@@ -78,20 +87,184 @@
             </form>
             </div>
       </div>
+      <div id="datePicker">
+        
+    </div>
         
       </div>
       <!-- Krishna-->
       <div id="top-carousel">
-        <div class=" d-flex alighn-items-center">
-          <div class="d-flex alighn-items-center">
-            <div class="d-flex flex-column ">
-              <img src="https://a0.muscache.com/im/pictures/mediaverse/category_icon/original/3e5243c8-4d15-4c6b-97e3-7ba2bb7bb880.png" alt="">
+        <div id="iconss">
+        <div class="d-flex">
+          
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="icon1.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">icons</p>
             </div>
-          </div>
+            
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Amazing views</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Beachfront</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Castles</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Arctic</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Tiney Homes</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Amazing pools</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Treehouses</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Lakefront</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Luxe</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Farms</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Cabins</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Mansions</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Beachfront</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Castles</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Arctic</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Tiney Homes</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Amazing pools</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Treehouses</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Lakefront</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Luxe</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Farms</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Cabins</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Mansions</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Beachfront</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Castles</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Arctic</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Tiney Homes</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Amazing pools</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Treehouses</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Lakefront</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Luxe</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Farms</p>
+            </div>
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Cabins</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center gray-400">
+              <img src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="" class="img-fluid h-1 w-1">
+           <p class="fs-6 fw-normal">Mansions</p>
+          </div>  
         </div>
-      </div>
+            
+          </div>
+       
+        </div>
+        
+      
+      
       <!--Himanshu-->
       <div id="cards"></div>
+
+      <!-- pagination section here -->
+      <div id="pagination">
+        <img src="assets/prev-enb.png" id="prev-page-button" alt="">
+        <div id="pages">
+
+        </div>
+        <img src="assets/next-enb.png" id="next-page-button" alt="">
+      </div>
+  
+
       <!--Rameshwar-->
       <div id="gateways">
         <div>
@@ -160,6 +333,7 @@
               </div>
           </div>
       </div>
+
   
       <hr> <!-- Horizontal line below title's row -->
       </div>
