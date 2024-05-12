@@ -559,5 +559,11 @@ function searchFunction(){
   fetchData(currPage,baseURL);
 }
 
+// top carousel button 
+let topNextButton = document.getElementById("top-carousel-next");
+let topPrevButton = document.getElementById("top-carousel-prev");
+topNextButton.addEventListener("click",()=>{})
+
+
 fetchData(currPage,baseURL)
 
