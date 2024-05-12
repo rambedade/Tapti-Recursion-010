@@ -148,13 +148,12 @@ body {
 
 .search-bar {
   display: flex;
-  align-items: center;
   justify-content: center;
   background: #fff;
   width: 65%;
   font-size: small;
   margin: 30px auto;
-  padding: 6px 10px 6px 30px;
+  padding: 10px 20px;
   border-radius: 50px;
   box-shadow: 1px 1px 1px 1px rgba(11, 0, 0, 0.297);
 }
@@ -162,7 +161,9 @@ body {
 .search-bar form {
   display: flex;
   align-items: center;
+  width: 100%;
   flex-wrap: wrap;
+  margin-left: 10px;
 }
 
 .dropdown-content {
@@ -195,31 +196,30 @@ body {
   display: block;
   border: 0;
   outline: none;
+  padding-left: 10px;
   background: transparent;
 }
 
 .search-bar form button {
-  width: 55px;
-  height: 55px;
+  padding: 15px 18px;
+  border: 0;
   border-radius: 50%;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    160deg,
-    rgba(231, 32, 80, 1) 81%,
-    rgba(249, 123, 148, 1) 60%,
-    rgba(231, 32, 80, 1) 81%
-  );
+  background: linear-gradient(160deg,
+      rgba(231, 32, 80, 1) 81%,
+      rgba(249, 123, 148, 1) 60%,
+      rgba(231, 32, 80, 1) 81%);
 }
 
 .where {
   flex: 1;
 }
 
-.search-bar :nth-child(4) {
-}
+.search-bar :nth-child(4) {}
 
 .search-bar form label {
   font-weight: 600;
+  padding-left: 10px;
 }
 
 .search-bar form :hover {
@@ -279,8 +279,7 @@ body {
 
 /* Mobile devices (320px to 480px) */
 
-#dropdown {
-}
+#dropdown {}
 
 /* HIMANSHU */
 #footer {
@@ -318,20 +317,21 @@ span {
   background-color: rgb(246, 247, 246);
 }
 
-#bottom > div:nth-last-of-type(1) {
+#bottom>div:nth-last-of-type(1) {
   display: flex;
   gap: 15px;
 }
 
-#bottom > div:nth-last-of-type(2) {
+#bottom>div:nth-last-of-type(2) {
   display: flex;
   gap: 5px;
 }
 
-#bottom > div:nth-last-of-type(2) > span:nth-of-type(n + 1):hover {
+#bottom>div:nth-last-of-type(2)>span:nth-of-type(n + 1):hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
 .c1 {
   border: 1px transparent;
   width: 300px;
@@ -339,6 +339,7 @@ span {
   position: relative;
   font-family: "Montserrat", sans-serif;
 }
+
 #cards {
   display: flex;
   flex-wrap: wrap;
@@ -368,6 +369,7 @@ span {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
 }
+
 .favorite-button {
   position: absolute;
   top: 10px;
@@ -379,24 +381,27 @@ span {
 }
 
 @media (max-width: 1366px) and (min-width: 1024px) {
+
   /* Your styles for standard laptop screens here */
   #navbar .menu-container {
     gap: 2px;
   }
-  #navbar .menu-container .item-menu {
-  }
+
+  #navbar .menu-container .item-menu {}
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
   .c1 {
     border-bottom: 1px grey;
   }
+
   #cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   #footer {
     display: flex;
     flex-direction: column;
@@ -408,11 +413,13 @@ span {
     flex-direction: column;
     gap: 50px;
   }
+
   #bottom div {
     display: flex;
     flex-direction: column;
   }
-  #bottom > div:nth-of-type(1) > span:nth-child(2n) {
+
+  #bottom>div:nth-of-type(1)>span:nth-child(2n) {
     /* visibility:collapse; */
     display: none;
   }
@@ -420,6 +427,7 @@ span {
   #navbar .menu-container .menus .item-menu {
     font-size: 10px;
   }
+
   #navbar .menu-container .right-menu {
     font-size: 12px;
   }
@@ -502,7 +510,7 @@ hr {
   justify-content: center;
 }
 
-#pagination > #pages {
+#pagination>#pages {
   display: flex;
   justify-content: center;
   align-items: center;
