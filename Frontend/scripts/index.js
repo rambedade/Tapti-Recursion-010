@@ -148,8 +148,17 @@ async function pagining(page, total_data){
   rest_page.innerText = "....";
   rest_page1.innerText = "....";
 
+  next.id="next-page";
+  previous.id="previous-page";
+
   middle_page.id = "mid-page";
-  lastPage = Math.ceil(total_data/12);
+  first_page.id = "first-page";
+  last_page.id = "last-page";
+  prev_page.id = "prev-page";
+  next_page.id = "next-page";
+  rest_page.className = "rest-page";
+  rest_page1.className = "rest-page1";
+    lastPage = Math.ceil(total_data/12);
   middle_page.innerText = page;
   first_page.innerText = 1;
   last_page.innerText = lastPage;

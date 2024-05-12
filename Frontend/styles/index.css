@@ -508,3 +508,17 @@ hr {
   align-items: center;
   gap: 20px;
 }
+
+/* CSS */
+/* Add pointer cursor to page buttons */
+#mid-page,
+#previous-page,
+#first-page,
+#last-page,
+#prev-page,
+#next-page,
+.rest-page,
+.rest-page1 {
+    cursor: pointer;
+}
+
