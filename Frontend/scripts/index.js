@@ -562,7 +562,13 @@ function searchFunction(){
 // top carousel button 
 let topNextButton = document.getElementById("top-carousel-next");
 let topPrevButton = document.getElementById("top-carousel-prev");
-topNextButton.addEventListener("click",()=>{})
+let topCarousel = document.getElementById("iconss");
+topNextButton.addEventListener("click",()=>{
+  topCarousel.scrollLeft+=1000;
+})
+topPrevButton.addEventListener("click",()=>{
+  topCarousel.scrollLeft-=1000;
+})
 
 
 fetchData(currPage,baseURL)
