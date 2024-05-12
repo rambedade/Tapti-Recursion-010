@@ -12,9 +12,8 @@
 
 /* Container */
 #container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 0px 20px;
+
   }
   
   /* Main section */
@@ -50,7 +49,21 @@
   #description {
     padding: 20px;
     background-color: #f0f0f0;
+    
   }
+  #discription {
+    margin-bottom: 20px; /* Add margin at the bottom to create space */
+    margin-top: 20px;
+
+}
+#discription h3{
+  margin-bottom: 5px;
+}
+
+#place-offer {
+    margin-top: 20px; /* Add margin at the top to create space */
+}
+
   
   /* Place offer section */
   #place-offer {
@@ -130,23 +143,66 @@
 
   /* images */
   /* Flat images */
-#flat-images {
+/* #flat-images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-bottom: 20px;
-    grid-template-areas: "";
 
   }
   
   #flat-images img {
     width: 100%;
     border-radius: 8px;
-  }  
+  }   */
 
+  #flat-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-template-rows:47% 47%; 
+    justify-content: center;
+    width: 100%;
+    height: 515px;
+    margin: auto;
+    gap: 10px; /* Defines the gap between grid items */
+    margin-bottom: 20px; 
+    /* Adds some margin at the bottom */
+    grid-template-areas:
+        "a1 a1 a2 a3"
+        "a1 a1 a4 a5";
+        /* Defines the grid template areas */
+}
 
+  #img1 {
+    grid-area: a1; /* Assigning grid area name for img1 */
+    /* Add additional styles for img1 */
 
+}
 
+#img2 {
+    grid-area: a2; /* Assigning grid area name for img2 */
+    /* Add additional styles for img2 */
+}
+
+#img3 {
+    grid-area: a3; /* Assigning grid area name for img3 */
+    /* Add additional styles for img3 */
+}
+
+#img4 {
+    grid-area: a4; /* Assigning grid area name for img4 */
+    /* Add additional styles for img4 */
+}
+
+#img5 {
+    grid-area: a5; /* Assigning grid area name for img5 */
+    /* Add additional styles for img5 */
+}
+#flat-images img {
+  width: 100%; /* Ensures images fill their grid areas */
+  border-radius: 8px; /* Adds border-radius for rounded corners */
+  height: 100%;
+}
 
   
   /* Host section */
@@ -196,3 +252,55 @@
     border-radius: 8px;
   }
   
+  #flat-title {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    color: #242222; /* Set the text color */
+    margin-bottom: 10px; /* Add margin at the bottom */
+}
+
+/* Mobile-first approach */
+
+/* Base styles */
+
+/* Add any base styles here that apply to all screen sizes */
+
+/* Media query for tablets and larger devices */
+@media screen and (min-width: 768px) {
+  /* Adjustments for tablets and larger devices */
+
+  /* Main container */
+  #container {
+    padding: 0 30px; /* Increase padding for larger screens */
+  }
+
+  /* Main section */
+  #main-section {
+    flex-direction: row; /* Display sections side by side */
+  }
+
+  /* Left main section */
+  #left-main {
+    flex: 2; /* Set flex basis */
+    padding: 20px;
+  }
+
+  /* Right main section */
+  #right-main {
+    flex: 1; /* Set flex basis */
+    padding: 20px;
+  }
+}
+
+/* Media query for desktops */
+@media screen and (min-width: 1024px) {
+  /* Adjustments for desktops */
+
+  /* Main container */
+  #container {
+    max-width: 1200px; /* Limit container width for larger screens */
+    margin: 0 auto; /* Center align container */
+  }
+}
+
+/* Additional media queries can be added as needed for larger screens */

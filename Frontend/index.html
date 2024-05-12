@@ -23,7 +23,10 @@
         
         <div class="menu-container">
           <div class="menu-flex">
-              <img src="assets/airbnb-logo.png" class="logo"/>
+            <a href="index.html">
+              <img src="assets/airbnb-logo.png" class="logo" id="logoo"/>
+            </a>
+              
           </div>
           <div class="menu-flex">
               <div class="menus">
@@ -39,8 +42,9 @@
                       <button id=" btn" class="menu-globe"><span class="material-icons globe">language</span></button>
                       <div class="button-icons"><span class="material-icons iconMenu">menu</span> <span class="material-icons iconUser">account_circle</span>
                       <div id="dropdownMenu" class="dropdown-content">
-                        <a href="#" style="font-weight: 600;">sign up</a>
-                        <a href="#">Login</a>
+                        <a href="./signup.html" style="font-weight: 600;">sign up</a>
+                        <a href="./login.html">Login</a>
+
                         <a href="#">Airbnb Your Home</a>
                         <a href="#">Help Center</a>
 
@@ -55,7 +59,7 @@
               <form>
              <div class="where">
               <label>Where</label>
-              <input type="text" placeholder="Search Destinations">
+              <input id="search-destination" type="text" placeholder="Search Destinations">
              </div>
              <div>
              <label>Check in</label>
@@ -79,7 +83,7 @@
               <input type="text" placeholder="Add Guests">
              </div>
              <div>
-             <button type="submit">
+             <button id="search-button" type="submit">
              <i class="fa-solid fa-magnifying-glass"></i>
              </button>
             </div>
@@ -266,75 +270,51 @@
 
       <!--Rameshwar-->
       <div id="gateways">
-        <div>
-          <div class="dropdown" id="popularDropdown">
-              <span>Popular</span>
-              <div class="dropdown-content">
-                  <a href="#">Canmore - Flat rentals</a>
-                  <a href="#">Mijas - House rentals</a>
-                  <a href="#">Tucson - Holiday rentals</a>
-              </div>
-          </div>
-          <div class="dropdown" id="artsCultureDropdown">
-              <span>Arts & culture</span>
-              <div class="dropdown-content">
-                  <a href="#">Flat rentals</a>
-                  <a href="#">Cottage rentals</a>
-                  <a href="#">Holiday rentals</a>
-              </div>
-          </div>
-          <div class="dropdown" id="outdoorsDropdown">
-              <span>Outdoors</span>
-              <div class="dropdown-content">
-                  <a href="#">Benalmádena - Flat rentals</a>
-                  <a href="#">Prescott - Cottage rentals</a>
-                  <a href="#">Jasper - Holiday rentals</a>
-              </div>
-          </div>
-          <div class="dropdown" id="mountainsDropdown">
-              <span>Mountains</span>
-              <div class="dropdown-content">
-                  <a href="#">Flat rentals</a>
-                  <a href="#">Cottage rentals</a>
-                  <a href="#">Holiday rentals</a>
-              </div>
-          </div>
-          <div class="dropdown" id="beachDropdown">
-              <span>Beach</span>
-              <div class="dropdown-content">
-                  <a href="#">Marbella - Flat rentals</a>
-                  <a href="#">Scottsdale - Holiday rentals</a>
-                  <a href="#">Mountain View - Holiday rentals</a>
-              </div>
-          </div>
-          <div class="dropdown" id="uniqueStaysDropdown">
-              <span>Unique stays</span>
-              <div class="dropdown-content">
-                  <a href="#">Flat rentals</a>
-                  <a href="#">Cottage rentals</a>
-                  <a href="#">Holiday rentals</a>
-              </div>
-          </div>
-          <div class="dropdown" id="categoriesDropdown">
-              <span>Categories</span>
-              <div class="dropdown-content">
-                  <a href="#">Flat rentals</a>
-                  <a href="#">Cottage rentals</a>
-                  <a href="#">Holiday rentals</a>
-              </div>
-          </div>
-          <div class="dropdown" id="thingsToDoDropdown">
-              <span>Things to do</span>
-              <div class="dropdown-content">
-                  <a href="#">Flat rentals</a>
-                  <a href="#">Cottage rentals</a>
-                  <a href="#">Holiday rentals</a>
-              </div>
-          </div>
+        <h2>Inspiration for future getaways</h2>
+    <div>
+        <span class="dropdown" id="popularDropdown" onclick="toggleList('popular')" >Popular</span>
+        <span class="dropdown" id="artsCultureDropdown" onclick="toggleList('artsCulture')">Arts & culture</span>
+        <span class="dropdown" id="outdoorsDropdown" onclick="toggleList('outdoors')">Outdoors</span>
+        <span class="dropdown" id="mountainsDropdown" onclick="toggleList('mountains')">Mountains</span>
+        <span class="dropdown" id="beachDropdown" onclick="toggleList('beach')">Beach</span>
+        <span class="dropdown" id="uniqueStaysDropdown" onclick="toggleList('uniqueStays')">Unique stays</span>
+        <span class="dropdown" id="categoriesDropdown" onclick="toggleList('categories')">Categories</span>
+        <span class="dropdown" id="thingsToDoDropdown" onclick="toggleList('thingsToDo')">Things to do</span>
+    </div>
+
+    <hr> <!-- Horizontal line below title's row -->
+
+    <div class="list-section">
+        <div class="list" id="popularListSection">
+            <!-- Popular list items -->
+        </div>
+        <div class="list" id="artsCultureListSection">
+            <!-- Arts & Culture list items -->
+        </div>
+        <div class="list" id="outdoorsListSection">
+            <!-- Outdoors list items -->
+        </div>
+        <div class="list" id="mountainsListSection">
+          <!-- Mountains list items -->
+        </div>
+        <div class="list" id="beachListSection">
+          <!-- Beach list items -->
+        </div>
+        <div class="list" id="uniqueStaysListSection">
+          <!-- Unique Stays list items -->
+        </div>
+        <div class="list" id="categoriesListSection">
+          <!-- Categories list items -->
+        </div>
+        <div class="list" id="thingsToDoListSection">
+          <!-- Things to do list items -->
+        </div>
+    </div>
+    <div>
       </div>
 
   
-      <hr> <!-- Horizontal line below title's row -->
+       <!-- Horizontal line below title's row -->
       </div>
       <!--Himanshu-->
       <div id="footer">

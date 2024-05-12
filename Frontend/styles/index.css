@@ -26,13 +26,12 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #222222;
-
 }
 
 .top-text {
   color: #b3b3b3;
   text-decoration: underline;
-  font-family: 'airbnb-light';
+  font-family: "airbnb-light";
   font-size: 15px;
 }
 
@@ -43,7 +42,7 @@ body {
 
 .background {
   height: 560px;
-  background-image: url('../images/background.webp');
+  background-image: url("../images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
@@ -57,7 +56,7 @@ body {
 }
 
 .menu-flex {
-  flex: 1
+  flex: 1;
 }
 
 .logo {
@@ -87,7 +86,7 @@ body {
 .menu-button {
   background-color: transparent;
   color: #222222;
-  font-family: 'airbnb-light';
+  font-family: "airbnb-light";
   padding: 12px 15px;
   border: 0;
   border-radius: 25px;
@@ -96,7 +95,7 @@ body {
 }
 
 .menu-button:hover {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   cursor: pointer;
 }
 
@@ -110,7 +109,7 @@ body {
 
 .menu-globe:hover {
   cursor: pointer;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 .globe {
@@ -118,9 +117,9 @@ body {
 }
 
 .button-icons {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   color: grey;
-  font-family: 'airbnb-light';
+  font-family: "airbnb-light";
   font-size: 14px;
   font-weight: 600;
   padding: 6px 10px;
@@ -164,7 +163,6 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .dropdown-content {
@@ -205,18 +203,21 @@ body {
   height: 55px;
   border-radius: 50%;
   background: rgb(255, 255, 255);
-  background: linear-gradient(160deg, rgba(231, 32, 80, 1) 81%, rgba(249, 123, 148, 1) 60%, rgba(231, 32, 80, 1) 81%);
+  background: linear-gradient(
+    160deg,
+    rgba(231, 32, 80, 1) 81%,
+    rgba(249, 123, 148, 1) 60%,
+    rgba(231, 32, 80, 1) 81%
+  );
 }
 
 .where {
   flex: 1;
-
 }
 
-.search-bar :nth-child(4) {}
+
 
 .search-bar form label {
-
   font-weight: 600;
 }
 
@@ -278,10 +279,6 @@ body {
 /* Mobile devices (320px to 480px) */
 
 
-
-
-#dropdown {}
-
 /* HIMANSHU */
 #footer {
   display: flex;
@@ -318,42 +315,41 @@ span {
   background-color: rgb(246, 247, 246);
 }
 
-#bottom>div:nth-last-of-type(1) {
+#bottom > div:nth-last-of-type(1) {
   display: flex;
   gap: 15px;
 }
 
-#bottom>div:nth-last-of-type(2) {
+#bottom > div:nth-last-of-type(2) {
   display: flex;
   gap: 5px;
 }
 
-#bottom>div:nth-last-of-type(2)>span:nth-of-type(n + 1):hover {
+#bottom > div:nth-last-of-type(2) > span:nth-of-type(n + 1):hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.c1{
-border: 1px transparent;
-width: 300px;
-height: auto;
-position: relative;
+.c1 {
+  border: 1px transparent;
+  width: 300px;
+  height: auto;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
 }
-#cards{
- 
-display: flex;
-flex-wrap: wrap;
-gap: 25px;
-/* position: relative;  */
-justify-content: center;
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  /* position: relative;  */
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 .c1 img {
   /* width: 340px !important; */
   height: 280px !important;
   border-radius: 8px;
   /* background-size: cover; */
-
 }
 
 #info {
@@ -361,11 +357,13 @@ justify-content: center;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
 }
 
 #info2 {
   display: flex;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 }
 .favorite-button {
   position: absolute;
@@ -377,7 +375,7 @@ justify-content: center;
   cursor: pointer;
 }
 
-@media(max-width: 1366px) and (min-width: 1024px ) {
+@media (max-width: 1366px) and (min-width: 1024px) {
   /* Your styles for standard laptop screens here */
   #navbar .menu-container .menus .item-menu{
     font-size: 10px;
@@ -440,18 +438,17 @@ justify-content: center;
  
 }
 
-@media (max-width: 767px) and (min-width:320px) {
- .c1{
-  border-bottom: 1px grey;
- }
-  #cards{
+@media (max-width: 767px) and (min-width: 320px) {
+  .c1 {
+    border-bottom: 1px grey;
+  }
+  #cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
-  #footer{
+  #footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -460,12 +457,11 @@ justify-content: center;
   #bottom {
     display: flex;
     flex-direction: column;
-
+    gap: 50px;
   }
-  #bottom div{
+  #bottom div {
     display: flex;
     flex-direction: column;
-
   }
   .logo {
     width: 70px;
@@ -506,6 +502,12 @@ display: none;
         .search-bar input{
           font-size: 0px;
         }
+  #bottom > div:nth-of-type(1) > span:nth-child(2n) {
+    /* visibility:collapse; */
+    display: none;
+  }
+
+ 
 }
 @media (max-width: 320px) and (min-width:0px) {
   
@@ -515,8 +517,7 @@ display: none;
  
         }
         
-        #navbar .menu-container .menus div:nth-child(1){
-        }
+      
         #navbar .menu-container .right-menu{
           font-size: 10px;
          }
@@ -548,10 +549,13 @@ display: none;
 /* For standard mobile screens */
 
 /* Rameshwar Section */
-#gateways {
-  height: auto;
-  height: 400px;
+
+#gateways{
   background-color: rgb(246, 247, 246);
+  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-left: 10px;
+
 }
 
 .dropdown {
@@ -559,21 +563,36 @@ display: none;
   display: inline-block;
   margin-right: 20px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.dropdown.active::after {
+  width: 100%;
 }
 
 .dropdown-content {
-
   display: none;
-  position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
-  /* z-index: 1; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 5px;
 }
 
 .dropdown.active .dropdown-content {
   display: block;
+  position: relative;
+  margin-top: 10px;
 }
 
 .dropdown-content a {
@@ -587,14 +606,40 @@ display: none;
   background-color: #ddd;
 }
 
-/* Thick black line below each title */
-.dropdown.active span::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  margin-top: 3px;
+/* Horizontal line below title's row */
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 10px 0;
+}
+
+/* List section style */
+.list-section {
+  margin-top: 20px; /* Gap between horizontal line and list section */
+  overflow-x: auto; /* Horizontal scroll for small screens */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+/* List style */
+.list-section > div {
+  padding-left: 20px;
+  /* font-weight: ; */
+  display: flex;
+  gap: 20px; /* Gap between list pairs */
+  flex-wrap: wrap; /* Wrap pairs into multiple rows */
+}
+
+.list-pair {
+  flex: 0 0 auto; /* Prevents flex items from growing */
+  width: 16.66%; /* Each pair takes up 16.66% of the container width (6 pairs in a row) */
+}
+
+.list-pair > div:first-child {
+  font-weight: bold; /* First name of pair is bold */
+}
+
+.list-pair > div:last-child {
+  font-size: 13px; /* Second name of pair has smaller font size */
 }
 
 /* Horizontal line below title's row */
@@ -603,8 +648,6 @@ hr {
   border-top: 1px solid #000;
   margin: 10px 0;
 }
-
-
 
 /* Pagination Styiling  here  */
 
@@ -625,9 +668,23 @@ hr {
   justify-content: center;
 }
 
-#pagination>#pages {
+#pagination > #pages {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
+
+/* CSS */
+/* Add pointer cursor to page buttons */
+#mid-page,
+#previous-page,
+#first-page,
+#last-page,
+#prev-page,
+#next-page,
+.rest-page,
+.rest-page1 {
+    cursor: pointer;
+}
+
