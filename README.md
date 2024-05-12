@@ -112,6 +112,21 @@ https://youtu.be/W84hCffJtCs
 - Search and filter property using search param
 - Private routes
 
+## Tech Stack
+
+The tech stack used for the project:
+
+FrontEnd :
+
+- HTML
+- CSS
+- Javascript
+- Bootstrap
+
+Backend :
+
+- JSON-server and Json-server-auth
+- used rendor.com website
 
 
 
