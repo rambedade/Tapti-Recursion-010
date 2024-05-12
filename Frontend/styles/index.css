@@ -276,61 +276,9 @@ body {
 /* Media queries for different screen sizes */
 
 /* Mobile devices (320px to 480px) */
-@media (max-width: 480px) {
-  #navbar {
-    font-size: smaller;
-    background-color: chocolate;
-  }
-}
 
-/* Tablets (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  #navbar .menu-container .menus .item-menu {
-    font-size: 12px;
-  }
 
-  #navbar .menu-container .right-menu {
-    font-size: 12px;
-  }
 
-}
-
-/* Small screens, laptops (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .item-menu {
-    font-size: 10px;
-    gap: 5px;
-  }
-
-  .menu-flex .right-menu-item #btn {
-    font-size: 10px;
-  }
-
-  .menu-flex img {
-    width: 3cm;
-  }
-}
-
-/* Desktops, large screens (1025px and above) */
-@media (min-width: 1025px) {
-  #navbar .menu-container {
-    gap: 2px;
-
-  }
-
-  #navbar .menu-container .item-menu {}
-
-}
-
-/* Extra large screens, TV (1201px and above) */
-@media (min-width: 1201px) {
-
-  .item-menu,
-  .fs-6 {
-    font-size: 1.6rem;
-    /* Adjust the font size as needed for extra large screens */
-  }
-}
 
 #dropdown {}
 
@@ -430,7 +378,14 @@ justify-content: center;
 }
 
 @media(max-width: 1366px) and (min-width: 1024px ) {
-
+  /* Your styles for standard laptop screens here */
+  #navbar .menu-container{
+    gap: 2px;
+  
+     }
+     #navbar .menu-container .item-menu{
+            
+    }
  
 }
 
@@ -461,6 +416,14 @@ justify-content: center;
     flex-direction: column;
 
   }
+  
+       #navbar .menu-container .menus .item-menu{
+        font-size: 10px;
+
+       }
+       #navbar .menu-container .right-menu{
+         font-size: 12px;
+        }
 }
 
 /* For standard mobile screens */
