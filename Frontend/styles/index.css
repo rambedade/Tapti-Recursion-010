@@ -428,10 +428,13 @@ span {
 /* For standard mobile screens */
 
 /* Rameshwar Section */
-#gateways {
-  height: auto;
-  height: 400px;
+
+#gateways{
   background-color: rgb(246, 247, 246);
+  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-left: 10px;
+
 }
 
 .dropdown {
@@ -439,20 +442,36 @@ span {
   display: inline-block;
   margin-right: 20px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.dropdown.active::after {
+  width: 100%;
 }
 
 .dropdown-content {
   display: none;
-  position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
-  /* z-index: 1; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 5px;
 }
 
 .dropdown.active .dropdown-content {
   display: block;
+  position: relative;
+  margin-top: 10px;
 }
 
 .dropdown-content a {
@@ -466,14 +485,40 @@ span {
   background-color: #ddd;
 }
 
-/* Thick black line below each title */
-.dropdown.active span::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  margin-top: 3px;
+/* Horizontal line below title's row */
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 10px 0;
+}
+
+/* List section style */
+.list-section {
+  margin-top: 20px; /* Gap between horizontal line and list section */
+  overflow-x: auto; /* Horizontal scroll for small screens */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+/* List style */
+.list-section > div {
+  padding-left: 20px;
+  /* font-weight: ; */
+  display: flex;
+  gap: 20px; /* Gap between list pairs */
+  flex-wrap: wrap; /* Wrap pairs into multiple rows */
+}
+
+.list-pair {
+  flex: 0 0 auto; /* Prevents flex items from growing */
+  width: 16.66%; /* Each pair takes up 16.66% of the container width (6 pairs in a row) */
+}
+
+.list-pair > div:first-child {
+  font-weight: bold; /* First name of pair is bold */
+}
+
+.list-pair > div:last-child {
+  font-size: 13px; /* Second name of pair has smaller font size */
 }
 
 /* Horizontal line below title's row */
