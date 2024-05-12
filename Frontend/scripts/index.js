@@ -1,7 +1,9 @@
-
+const  baseURL = "https://tapti-recursion-010-v93f.onrender.com/data"; 
 const menuIcon = document.querySelector('.button-icons');
 const dropdownMenu = document.getElementById('dropdownMenu');
-
+let pages = document.getElementById("pages");
+let previous = document.getElementById("prev-page-button");
+let next = document.getElementById("next-page-button");
 menuIcon.addEventListener('click', function() {
   dropdownMenu.classList.toggle('show');
 });
@@ -76,21 +78,25 @@ function createCards(det){
 
   return card;
 }
-
-async function fetchData(url){
+var currPage = 1;
+async function fetchData(page,url){
   try {
-      let res=await fetch(url);
+      let res=await fetch(url+`?_page=${page}&_limit=12`);
+      let total_data = res.headers.get("X-Total-Count");
       let data=await res.json();
-    data.forEach((det)=>{
-       
-       cont.append(createCards(det));
-    })
+      cont.innerHTML = "";
+      pages.innerHTML = "";
+      data.forEach((det)=>{
+        cont.append(createCards(det));
+      })
+      currPage = page;
+      console.log(page);
+      pagining(page,total_data);
 
   } catch (error) {
       console.log(error);
   }
 }
-fetchData("https://tapti-recursion-010-v93f.onrender.com/data")
 // Rameshwar /
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -111,3 +117,88 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+// Pagination code here 
+async function pagining(page, total_data){
+
+  let first_page = document.createElement("div");
+  let last_page = document.createElement("div");
+  let prev_page = document.createElement("div");
+  let next_page = document.createElement("div");
+  let middle_page = document.createElement("div");
+  let rest_page = document.createElement("div");
+  let rest_page1 = document.createElement("div");
+  rest_page.innerText = "....";
+  rest_page1.innerText = "....";
+
+  middle_page.id = "mid-page";
+  let lastPage = Math.ceil(total_data/12);
+  middle_page.innerText = page;
+  first_page.innerText = 1;
+  last_page.innerText = lastPage;
+  prev_page.innerText = page-1;
+  next_page.innerText = page+1;
+  // console.log(page);
+  if(page == 1 ){
+    previous.src = "assets/prev-dis.png";
+    next.src = "assets/next-enb.png";
+    pages.append(middle_page,next_page,rest_page,last_page);
+
+  }
+  else if(page == 2){
+    previous.src = "assets/prev-enb.png";
+    next.src = "assets/next-enb.png";
+
+    pages.append(prev_page,middle_page,next_page,rest_page,last_page);
+  }
+  else if(page == lastPage) {
+    previous.src = "assets/prev-enb.png";
+    next.src = "assets/next-dis.png";
+    pages.append(first_page,rest_page,prev_page,middle_page);
+  }
+  else if( page == lastPage-1){
+    previous.src = "assets/prev-enb.png";
+    next.src = "assets/next-enb.png";
+    pages.append(first_page,rest_page,prev_page,middle_page,next_page);
+  }
+  else{
+    previous.src = "assets/prev-enb.png";
+    next.src = "assets/next-enb.png";
+    pages.append(first_page,rest_page,prev_page,middle_page,next_page,rest_page1,last_page);
+  }
+  
+
+
+  first_page.addEventListener("click",()=>{
+    page = 1;
+    fetchData(page,baseURL);
+  })
+  last_page.addEventListener("click",()=>{
+    page = lastPage;
+    fetchData(page,baseURL);
+  })
+  next_page.addEventListener("click",()=>{
+    page++;
+    fetchData(page,baseURL);
+  })
+  prev_page.addEventListener("click",()=>{
+    page--;
+    fetchData(page,baseURL);
+  })
+}
+
+next.addEventListener("click",()=>{
+  currPage++;
+  fetchData(currPage,baseURL);
+})
+
+previous.addEventListener("click",()=>{
+  currPage--;
+  fetchData(currPage,baseURL);
+})
+
+fetchData(currPage,baseURL)
+
+
