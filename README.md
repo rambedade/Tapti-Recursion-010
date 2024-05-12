@@ -82,9 +82,6 @@ https://youtu.be/W84hCffJtCs
 ![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/6fc52cef-cc00-44cc-800f-4d031f0f85df)
 
 
-![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/9d2c9e30-2851-441c-ba87-40bc6a07dafa)
-
-
 ![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/7ed28261-69c3-40c4-b5c5-acdb713ae3ce)
 
 
