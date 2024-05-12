@@ -26,13 +26,12 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #222222;
-
 }
 
 .top-text {
   color: #b3b3b3;
   text-decoration: underline;
-  font-family: 'airbnb-light';
+  font-family: "airbnb-light";
   font-size: 15px;
 }
 
@@ -43,7 +42,7 @@ body {
 
 .background {
   height: 560px;
-  background-image: url('../images/background.webp');
+  background-image: url("../images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
@@ -57,7 +56,7 @@ body {
 }
 
 .menu-flex {
-  flex: 1
+  flex: 1;
 }
 
 .logo {
@@ -87,7 +86,7 @@ body {
 .menu-button {
   background-color: transparent;
   color: #222222;
-  font-family: 'airbnb-light';
+  font-family: "airbnb-light";
   padding: 12px 15px;
   border: 0;
   border-radius: 25px;
@@ -96,7 +95,7 @@ body {
 }
 
 .menu-button:hover {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   cursor: pointer;
 }
 
@@ -110,7 +109,7 @@ body {
 
 .menu-globe:hover {
   cursor: pointer;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 .globe {
@@ -118,9 +117,9 @@ body {
 }
 
 .button-icons {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   color: grey;
-  font-family: 'airbnb-light';
+  font-family: "airbnb-light";
   font-size: 14px;
   font-weight: 600;
   padding: 6px 10px;
@@ -164,7 +163,6 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .dropdown-content {
@@ -205,18 +203,22 @@ body {
   height: 55px;
   border-radius: 50%;
   background: rgb(255, 255, 255);
-  background: linear-gradient(160deg, rgba(231, 32, 80, 1) 81%, rgba(249, 123, 148, 1) 60%, rgba(231, 32, 80, 1) 81%);
+  background: linear-gradient(
+    160deg,
+    rgba(231, 32, 80, 1) 81%,
+    rgba(249, 123, 148, 1) 60%,
+    rgba(231, 32, 80, 1) 81%
+  );
 }
 
 .where {
   flex: 1;
-
 }
 
-.search-bar :nth-child(4) {}
+.search-bar :nth-child(4) {
+}
 
 .search-bar form label {
-
   font-weight: 600;
 }
 
@@ -277,10 +279,8 @@ body {
 
 /* Mobile devices (320px to 480px) */
 
-
-
-
-#dropdown {}
+#dropdown {
+}
 
 /* HIMANSHU */
 #footer {
@@ -318,42 +318,41 @@ span {
   background-color: rgb(246, 247, 246);
 }
 
-#bottom>div:nth-last-of-type(1) {
+#bottom > div:nth-last-of-type(1) {
   display: flex;
   gap: 15px;
 }
 
-#bottom>div:nth-last-of-type(2) {
+#bottom > div:nth-last-of-type(2) {
   display: flex;
   gap: 5px;
 }
 
-#bottom>div:nth-last-of-type(2)>span:nth-of-type(n + 1):hover {
+#bottom > div:nth-last-of-type(2) > span:nth-of-type(n + 1):hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.c1{
-border: 1px transparent;
-width: 300px;
-height: auto;
-position: relative;
+.c1 {
+  border: 1px transparent;
+  width: 300px;
+  height: auto;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
 }
-#cards{
- 
-display: flex;
-flex-wrap: wrap;
-gap: 25px;
-/* position: relative;  */
-justify-content: center;
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  /* position: relative;  */
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 .c1 img {
   /* width: 340px !important; */
   height: 280px !important;
   border-radius: 8px;
   /* background-size: cover; */
-
 }
 
 #info {
@@ -361,11 +360,13 @@ justify-content: center;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
 }
 
 #info2 {
   display: flex;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 }
 .favorite-button {
   position: absolute;
@@ -377,30 +378,26 @@ justify-content: center;
   cursor: pointer;
 }
 
-@media(max-width: 1366px) and (min-width: 1024px ) {
+@media (max-width: 1366px) and (min-width: 1024px) {
   /* Your styles for standard laptop screens here */
-  #navbar .menu-container{
+  #navbar .menu-container {
     gap: 2px;
-  
-     }
-     #navbar .menu-container .item-menu{
-            
-    }
- 
+  }
+  #navbar .menu-container .item-menu {
+  }
 }
 
-@media (max-width: 767px) and (min-width:320px) {
- .c1{
-  border-bottom: 1px grey;
- }
-  #cards{
+@media (max-width: 767px) and (min-width: 320px) {
+  .c1 {
+    border-bottom: 1px grey;
+  }
+  #cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
-  #footer{
+  #footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -409,21 +406,23 @@ justify-content: center;
   #bottom {
     display: flex;
     flex-direction: column;
-
+    gap: 50px;
   }
-  #bottom div{
+  #bottom div {
     display: flex;
     flex-direction: column;
-
   }
-  
-       #navbar .menu-container .menus .item-menu{
-        font-size: 10px;
+  #bottom > div:nth-of-type(1) > span:nth-child(2n) {
+    /* visibility:collapse; */
+    display: none;
+  }
 
-       }
-       #navbar .menu-container .right-menu{
-         font-size: 12px;
-        }
+  #navbar .menu-container .menus .item-menu {
+    font-size: 10px;
+  }
+  #navbar .menu-container .right-menu {
+    font-size: 12px;
+  }
 }
 
 /* For standard mobile screens */
@@ -443,7 +442,6 @@ justify-content: center;
 }
 
 .dropdown-content {
-
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -485,8 +483,6 @@ hr {
   margin: 10px 0;
 }
 
-
-
 /* Pagination Styiling  here  */
 
 #pagination {
@@ -506,14 +502,12 @@ hr {
   justify-content: center;
 }
 
-#pagination>#pages {
+#pagination > #pages {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-
-
 
 /* CSS */
 /* Add pointer cursor to page buttons */
@@ -527,3 +521,4 @@ hr {
 .rest-page1 {
     cursor: pointer;
 }
+
