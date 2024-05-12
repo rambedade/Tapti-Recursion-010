@@ -78,7 +78,7 @@ https://youtu.be/OTSghI5dd6U
 https://youtu.be/W84hCffJtCs
 
 ## Screenshots
-
+Navbar
 ![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/9d2c9e30-2851-441c-ba87-40bc6a07dafa)
 
 
