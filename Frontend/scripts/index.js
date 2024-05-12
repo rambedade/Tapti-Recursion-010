@@ -1,4 +1,4 @@
-const  baseURL = "https://tapti-recursion-010-v93f.onrender.com/data"; 
+var  baseURL = "https://tapti-recursion-010-v93f.onrender.com/data?"; 
 const menuIcon = document.querySelector('.button-icons');
 const dropdownMenu = document.getElementById('dropdownMenu');
 let pages = document.getElementById("pages");
@@ -92,9 +92,11 @@ function createCards(det){
   return card;
 }
 var currPage = 1;
+var lastPage = 0;
 async function fetchData(page,url){
   try {
-      let res=await fetch(url+`?_page=${page}&_limit=12`);
+      console.log(url);
+      let res=await fetch(url+`&_page=${page}&_limit=12`);
       let total_data = res.headers.get("X-Total-Count");
       let data=await res.json();
       cont.innerHTML = "";
@@ -147,7 +149,7 @@ async function pagining(page, total_data){
   rest_page1.innerText = "....";
 
   middle_page.id = "mid-page";
-  let lastPage = Math.ceil(total_data/12);
+  lastPage = Math.ceil(total_data/12);
   middle_page.innerText = page;
   first_page.innerText = 1;
   last_page.innerText = lastPage;
@@ -203,15 +205,32 @@ async function pagining(page, total_data){
 }
 
 next.addEventListener("click",()=>{
-  currPage++;
-  fetchData(currPage,baseURL);
+  if(currPage < lastPage){
+    currPage++;
+    fetchData(currPage,baseURL);
+  }
 })
 
 previous.addEventListener("click",()=>{
-  currPage--;
-  fetchData(currPage,baseURL);
+  if(currPage > 1){
+    currPage--;
+    fetchData(currPage,baseURL);
+  }
 })
 
-fetchData(currPage,baseURL)
+let searchDest = document.getElementById("search-destination");
+let searchButton = document.getElementById("search-button");
 
+searchButton.addEventListener("click", (e)=>{
+  e.preventDefault();
+  searchFunction();
+});
+function searchFunction(){
+  let filterString = searchDest.value;
+  baseURL+=`&smart_location_like=${filterString}`
+  
+  fetchData(currPage,baseURL);
+}
+
+fetchData(currPage,baseURL)
 
