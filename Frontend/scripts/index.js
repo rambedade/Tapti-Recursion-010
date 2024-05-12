@@ -79,6 +79,7 @@ function createCards(det){
   return card;
 }
 var currPage = 1;
+var lastPage = 0;
 async function fetchData(page,url){
   try {
       let res=await fetch(url+`?_page=${page}&_limit=12`);
@@ -134,7 +135,7 @@ async function pagining(page, total_data){
   rest_page1.innerText = "....";
 
   middle_page.id = "mid-page";
-  let lastPage = Math.ceil(total_data/12);
+  lastPage = Math.ceil(total_data/12);
   middle_page.innerText = page;
   first_page.innerText = 1;
   last_page.innerText = lastPage;
@@ -190,13 +191,17 @@ async function pagining(page, total_data){
 }
 
 next.addEventListener("click",()=>{
-  currPage++;
-  fetchData(currPage,baseURL);
+  if(currPage < lastPage){
+    currPage++;
+    fetchData(currPage,baseURL);
+  }
 })
 
 previous.addEventListener("click",()=>{
-  currPage--;
-  fetchData(currPage,baseURL);
+  if(currPage > 1){
+    currPage--;
+    fetchData(currPage,baseURL);
+  }
 })
 
 fetchData(currPage,baseURL)

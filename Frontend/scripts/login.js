@@ -33,7 +33,7 @@ async function verifyUserData(){
                 if(element.email == userEmail.value && element.password == userPassword.value){
                     stopLoading();
                     alert(`Welcome ${element.name}!`);
-                    localStorage.setItem("loggedIn",element.name);
+                    localStorage.setItem("loggedIn",JSON.stringify(element));
                     flag = true;
                     window.location.assign("index.html");
                     // head.appendChild(redirect);
