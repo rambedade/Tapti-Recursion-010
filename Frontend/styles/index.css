@@ -71,7 +71,7 @@ body {
 }
 
 .item-menu {
-  font-family: "airbnb-light";
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 17px;
   cursor: pointer;
@@ -379,13 +379,64 @@ justify-content: center;
 
 @media(max-width: 1366px) and (min-width: 1024px ) {
   /* Your styles for standard laptop screens here */
-  #navbar .menu-container{
-    gap: 2px;
-  
-     }
-     #navbar .menu-container .item-menu{
-            
+  #navbar .menu-container .menus .item-menu{
+    font-size: 10px;
+
+   }
+   #navbar .menu-container .right-menu{
+     font-size: 20px;
     }
+    .menu-button {
+      font-size: 8px;
+    }
+    .search-bar {
+        gap: 5px;
+      font-size:  8px;
+    }
+    .search-bar div{
+      margin: 5px;
+           
+
+    }
+    .search-bar button{
+      display: none;
+    }
+    .search-bar input{
+      font-size: 8px;
+    }
+  
+ 
+}
+
+@media(max-width: 1024px) and (min-width: 767px ) {
+
+  /* Your styles for standard laptop screens here */
+  #navbar .menu-container .menus .item-menu{
+    font-size: 10px;
+
+   }
+   #navbar .menu-container .right-menu{
+     font-size: 22px;
+    }
+    .menu-button {
+      font-size: 0px;
+    }
+    .search-bar {
+        gap: 5px;
+      font-size:  8px;
+    }
+    .search-bar div{
+      margin: 5px;
+           
+
+    }
+    .search-bar button{
+      display: none;
+    }
+    .search-bar input{
+      font-size: 5px;
+    }
+  
  
 }
 
@@ -416,15 +467,83 @@ justify-content: center;
     flex-direction: column;
 
   }
+  .logo {
+    width: 70px;
+    margin-left: 80px;
+  }
   
        #navbar .menu-container .menus .item-menu{
-        font-size: 10px;
+        font-size: 7px;
 
+       }
+       
+       #navbar .menu-container .menus div{
+display: none;
        }
        #navbar .menu-container .right-menu{
          font-size: 12px;
         }
+        .menu-button {
+          font-size: 0px;
+        }
+        .menu-globe{
+          display: none;
+        }
+        .search-bar {
+            gap: 5px;
+          font-size:  8px;
+        }
+        .search-bar div{
+          margin: 5px;
+          display: flex;
+          align-items: center; 
+               
+
+        }
+        .search-bar button{
+          display: none;
+        }
+        .search-bar input{
+          font-size: 0px;
+        }
 }
+@media (max-width: 320px) and (min-width:0px) {
+  
+   
+        #navbar .menu-container .menus .item-menu{
+         display: none;
+ 
+        }
+        
+        #navbar .menu-container .menus div:nth-child(1){
+        }
+        #navbar .menu-container .right-menu{
+          font-size: 10px;
+         }
+         .menu-button {
+           font-size: 0px;
+         }
+         .menu-globe{
+           display: none;
+         }
+         .search-bar {
+             gap: 5px;
+           font-size:  8px;
+         }
+         .search-bar div{
+           margin: 5px;
+           display: flex;
+           align-items: center; 
+                
+ 
+         }
+         .search-bar button{
+           display: none;
+         }
+         .search-bar input{
+           font-size: 0px;
+         }
+ }
 
 /* For standard mobile screens */
 
