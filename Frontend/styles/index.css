@@ -224,35 +224,43 @@ body {
   border-radius: 50px;
   background-color: rgb(230, 227, 227);
 }
-#top-carousel .d-flex{
+
+#top-carousel .d-flex {
   margin-left: 20px;
   gap: 10px;
 }
-#top-carousel{
+
+#top-carousel {
   display: flex;
 }
-#top-carousel img{
-       width:2rem ;
-       height: 2rem;
+
+#top-carousel img {
+  width: 2rem;
+  height: 2rem;
 }
+
 #iconss {
-  margin:5px;
+  margin: 5px;
   display: flex;
   overflow-x: auto;
 }
-#iconss::-webkit-scrollbar{
+
+#iconss::-webkit-scrollbar {
   width: 0;
 }
-#top-carousel p{
-          font-size: 0.873rem;
-          color: gray;
-          font-weight: 400;
+
+#top-carousel p {
+  font-size: 0.873rem;
+  color: gray;
+  font-weight: 400;
 }
-#top-carousel p:hover{
+
+#top-carousel p:hover {
   font-size: 0.873rem;
   color: rgb(16, 15, 15);
   font-weight: 400;
 }
+
 #datePicker {
   position: absolute;
   display: none;
@@ -264,63 +272,68 @@ body {
 #datePicker input[type="datetime-local"] {
   width: 200px;
 }
+
 /* Media queries for different screen sizes */
 
 /* Mobile devices (320px to 480px) */
 @media (max-width: 480px) {
-  #navbar{
+  #navbar {
     font-size: smaller;
     background-color: chocolate;
-   }
+  }
 }
 
 /* Tablets (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-  #navbar .menu-container .menus .item-menu{
-   font-size: 12px;
-  }
-  #navbar .menu-container .right-menu{
+  #navbar .menu-container .menus .item-menu {
     font-size: 12px;
-   }
-  
+  }
+
+  #navbar .menu-container .right-menu {
+    font-size: 12px;
+  }
+
 }
 
 /* Small screens, laptops (769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-   .item-menu{
-  font-size: 10px;
-  gap: 5px;
-  }
-   .menu-flex .right-menu-item #btn{
+  .item-menu {
     font-size: 10px;
-   }
-   .menu-flex img{
+    gap: 5px;
+  }
+
+  .menu-flex .right-menu-item #btn {
+    font-size: 10px;
+  }
+
+  .menu-flex img {
     width: 3cm;
-   }
+  }
 }
 
 /* Desktops, large screens (1025px and above) */
 @media (min-width: 1025px) {
-  #navbar .menu-container{
-  gap: 2px;
+  #navbar .menu-container {
+    gap: 2px;
 
-   }
-   #navbar .menu-container .item-menu{
-  
-     }
+  }
+
+  #navbar .menu-container .item-menu {}
 
 }
 
 /* Extra large screens, TV (1201px and above) */
 @media (min-width: 1201px) {
+
   .item-menu,
   .fs-6 {
-    font-size: 1.6rem; /* Adjust the font size as needed for extra large screens */
+    font-size: 1.6rem;
+    /* Adjust the font size as needed for extra large screens */
   }
 }
 
-#dropdown{
-}
+#dropdown {}
+
 /* HIMANSHU */
 #footer {
   display: flex;
@@ -336,7 +349,7 @@ body {
 #footer div {
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
 }
 
 .tags:hover {
@@ -344,7 +357,8 @@ body {
   cursor: pointer;
 }
 
-#footer p,span {
+#footer p,
+span {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -370,55 +384,64 @@ body {
   cursor: pointer;
   text-decoration: underline;
 }
-.c1{
-border: 1px transparent;
-width: 300px;
-height: auto;
+
+.c1 {
+  border: 1px transparent;
+  width: 300px;
+  height: auto;
 
 }
-#cards{
- 
-display: flex;
-flex-wrap: wrap;
-gap: 25px;
-justify-content: center;
+
+#cards {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 
 }
-.c1 img{
+
+.c1 img {
   /* width: 340px !important; */
   height: 280px !important;
   border-radius: 8px;
   /* background-size: cover; */
 }
+
 #info {
   gap: 10px;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
 }
-#info2{
+
+#info2 {
   display: flex;
   flex-direction: column;
 }
 
 
-@media(max-width: 1366px) and (min-width: 1024px ) {
+@media(max-width: 1366px) and (min-width: 1024px) {
   /* Your styles for standard laptop screens here */
- 
+
 }
+
 @media (max-width: 767px) and (min-width:320px) {
+
   /* Your styles for standard mobile screens here */
-  #footer{
+  #footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
-  #bottom{
+
+  #bottom {
     display: flex;
     flex-direction: column;
 
   }
 }
+
 /* For standard mobile screens */
 
 /* Rameshwar Section */
@@ -476,4 +499,32 @@ hr {
   border: none;
   border-top: 1px solid #000;
   margin: 10px 0;
+}
+
+
+
+/* Pagination Styiling  here  */
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 30px auto;
+}
+
+#pagination #mid-page {
+  background-color: black;
+  border-radius: 50%;
+  width: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#pagination>#pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
