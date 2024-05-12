@@ -144,5 +144,12 @@ To run this project locally:
 - [Rameshwar Bedade](https://github.com/rambedade)
 - [Krishna More](https://github.com/krishnadesh4466)
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Inspired by Airbnb original website.
 
 
