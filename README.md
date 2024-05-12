@@ -103,7 +103,14 @@ https://youtu.be/W84hCffJtCs
 ![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/055c7e5a-c935-45e1-b167-3c1bed6a8be1)
 
 
+## Features
 
+- Responsive and dynamic website
+- User authentication
+- Admin Dashboard and CRUD Operations
+- Add property to favorites
+- Search and filter property using search param
+- Private routes
 
 
 
