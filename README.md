@@ -60,3 +60,20 @@ TaptiBnB
 └── README.md
 
 ```
+
+## Video Walkthrough of the project
+
+A detailed walkthrough of all the features of our project can be found here:
+
+https://youtu.be/qXqlZzKvdAs
+
+## Questions based on the project
+
+Questions based on the project questions can be found here: 
+
+https://youtu.be/56aMTXPO0WA
+
+https://youtu.be/OTSghI5dd6U
+
+https://youtu.be/W84hCffJtCs
+
