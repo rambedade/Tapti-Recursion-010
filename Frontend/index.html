@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TaptiBnb | Holiday rentals, cabins, beach houses & more</title>
+    <link rel="icon" type="image/x-icon" href="assets/logonavbar.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shojumaru&display=swap" rel="stylesheet">
@@ -17,14 +18,13 @@
   </head>
 
   <body>
-    <div class="container">
+    <div id="container">
       <!-- Krishna-->
       <div id="navbar">
-        
         <div class="menu-container">
           <div class="menu-flex">
             <a href="index.html">
-              <img src="assets/airbnb-logo.png" class="logo" id="logoo"/>
+              <img src="assets/taptibnb-logo.png" class="logo" id="logoo"/>
             </a>
               
           </div>
@@ -42,9 +42,8 @@
                       <button id=" btn" class="menu-globe"><span class="material-icons globe">language</span></button>
                       <div class="button-icons"><span class="material-icons iconMenu">menu</span> <span class="material-icons iconUser">account_circle</span>
                       <div id="dropdownMenu" class="dropdown-content">
-                        <a href="./signup.html" style="font-weight: 600;">sign up</a>
+                        <a href="./signup.html" style="font-weight: 600;">Sign up</a>
                         <a href="./login.html">Login</a>
-
                         <a href="#">Airbnb Your Home</a>
                         <a href="#">Help Center</a>
 
@@ -61,10 +60,10 @@
               <label>Where</label>
               <input id="search-destination" type="text" placeholder="Search Destinations">
              </div>
-             <div>
+             <div >
              <label>Check in</label>
-             <input type="datetime-local"
-               id="Test_DatetimeLocal1"
+             <input type="date"
+               class="DatetimeLocal"
                min="2015-01-01T00:00"
                max="2025-12-31T23:59"
                step="1">
@@ -72,8 +71,8 @@
              </div>
              <div>
              <label>Check Out</label>
-             <input type="datetime-local"
-             id="Test_DatetimeLocal2"
+             <input type="date"
+             class="DatetimeLocal"
              min="2015-01-01T00:00"
              max="2025-12-31T23:59"
              step="1">
@@ -97,11 +96,11 @@
       </div>
       <!-- Krishna-->
       <div id="top-carousel">
+        <div><img id="top-carousel-prev"class="top-carousel-button" src="assets/prev-enb.png" alt=""></div>
         <div id="iconss">
-        <div class="d-flex">
-          
+        <div class="d-flex" id="top-main-carousel">
             <div class="d-flex flex-column align-items-center gray-400">
-              <img src="icon1.jpg" alt="" class="img-fluid h-1 w-1">
+              <img src="assets/icon1.jpg" alt="" class="img-fluid h-1 w-1">
            <p class="fs-6 fw-normal">icons</p>
             </div>
             
@@ -246,10 +245,11 @@
             <div class="d-flex flex-column align-items-center gray-400">
               <img src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="" class="img-fluid h-1 w-1">
            <p class="fs-6 fw-normal">Mansions</p>
-          </div>  
-        </div>
-            
           </div>
+        </div>
+        
+      </div>
+      <div><img id="top-carousel-next" class="top-carousel-button" src="assets/next-enb.png" alt=""></div>  
        
         </div>
         
