@@ -59,15 +59,24 @@ body {
 .menu-flex {
   flex: 1;
 }
-
+#web-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#top-navbar{
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#top-navbar>div{
+  width: 33%;
+}
 .logo {
-  margin-top: 30px;
-  margin-left: 80px;
   width: 160px;
   min-width: 120px;
   height: 70px;
 }
-#web-logo{}
 
 .menus {
   display: flex;
@@ -92,11 +101,10 @@ body {
 .menu-button {
   background-color: transparent;
   color: #222222;
-  font-family: "airbnb-light";
+  font-size: 16px;
   padding: 12px 15px;
   border: 0;
   border-radius: 25px;
-  font-size: 14px;
   font-weight: 600;
 }
 
@@ -136,7 +144,7 @@ body {
 }
 
 .menus .item-menu:nth-child(1) {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .button-icons:hover {
@@ -156,7 +164,7 @@ body {
   display: flex;
   justify-content: center;
   background: #fff;
-  width: 65%;
+  width: 60%;
   font-size: small;
   margin: 30px auto;
   padding: 10px 20px;
@@ -216,7 +224,7 @@ body {
   background: linear-gradient(160deg,
       rgba(231, 32, 80, 1) 81%,
       rgba(249, 123, 148, 1) 60%,
-      rgba(231, 32, 80, 1) 81%);
+      rgba(231, 32, 80, 1) 81%) !important;
 }
 
 .where {
@@ -229,7 +237,7 @@ body {
   padding-left: 10px;
 }
 
-.search-bar form :hover {
+.search-bar-fields :hover:not(label, input) {
   border-radius: 50px;
   background-color: rgb(230, 227, 227);
 }
@@ -535,6 +543,7 @@ span {
 
   .search-bar {
     gap: 5px;
+    width: 75%;
     /* font-size: 8px; */
   }
 
@@ -772,4 +781,12 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#loading{
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+#loading>img{
+  width: 100%;
 }

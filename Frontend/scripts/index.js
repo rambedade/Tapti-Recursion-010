@@ -4,9 +4,20 @@ const dropdownMenu = document.getElementById('dropdownMenu');
 let pages = document.getElementById("pages");
 let previous = document.getElementById("prev-page-button");
 let next = document.getElementById("next-page-button");
+let loading = document.getElementById("loading");
+
 menuIcon.addEventListener('click', function() {
   dropdownMenu.classList.toggle('show');
 });
+function showLoading(){
+  let img = document.createElement("img");
+  img.src = "assets/ZKZg.gif"
+  loading.append(img);
+}
+
+function stopLoading(){
+  loading.innerHTML = "";
+}
 
 // HIMANSHU------>>
 let cont=document.getElementById("cards")
@@ -23,8 +34,12 @@ export function createCards(det){
     carousel.classList.add("carousel");
     details.classList.add("details");
     let favbutton=document.createElement("button");
+    let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
     favbutton.innerHTML=`
     <i class="fa-regular fa-heart fa-sm"></i>`
+    if(loggedIn && loggedIn.wishlist.includes(det.id)){
+      favbutton.innerHTML = `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`
+    }
     favbutton.classList.add("favorite-button");
     details.innerHTML=`
     <div id="info">
@@ -85,12 +100,12 @@ export function createCards(det){
 
   favbutton.addEventListener("click",()=>{
     if(favbutton.innerHTML != `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`){
-      favbutton.innerHTML = `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`
       addToWishlist(det.id);
+      favbutton.innerHTML = `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`
     }
     else{
-      favbutton.innerHTML = `<i class="fa-regular fa-heart fa-sm"></i>`
       removeFromWishlist(det.id);
+      favbutton.innerHTML = `<i class="fa-regular fa-heart fa-sm"></i>`
     }
   })
   let carousalInner = carousel.querySelector(".carousel-inner");
@@ -100,7 +115,27 @@ export function createCards(det){
 
   return card;
 }
+async function removeFromWishlist(objId){
+  let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+  if(loggedIn){
+    let wishlist = loggedIn.wishlist;
+    loggedIn.wishlist = wishlist.filter((elem)=> elem != objId);
+    localStorage.setItem("loggedIn",JSON.stringify(loggedIn));
+    try{
+      await fetch(`https://tapti-recursion-010-v93f.onrender.com/users/${loggedIn.id}`, {
+        method:"PATCH",
+        headers:{
+          'Content-Type':'application/json',
+        },
+        body: JSON.stringify({"wishlist":wishlist})
+      })
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
 
+}
 async function addToWishlist(objId){
   let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
   if(loggedIn){
@@ -129,6 +164,7 @@ async function addToWishlist(objId){
 var currPage = 1;
 var lastPage = 0;
 async function fetchData(page,url){
+  showLoading();
   try {
       console.log(url);
       let res=await fetch(url+`&_page=${page}&_limit=12`);
@@ -146,6 +182,7 @@ async function fetchData(page,url){
   } catch (error) {
       console.log(error);
   }
+  stopLoading();
 }
 // Rameshwar /
 

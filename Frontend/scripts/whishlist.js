@@ -2,17 +2,17 @@ import { fetchIndexHTMl } from "./product.js";
 // import {createCards} from "./index.js"
 let url = "https://tapti-recursion-010-v93f.onrender.com/data?"
 let cont = document.getElementById("cards");
-// fetchIndexHTMl();
-let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
-let wishlist = loggedIn.wishlist;
+fetchIndexHTMl();
 async function fetchData(url){
+  let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+  let wishlist = loggedIn.wishlist;
     try {
         // console.log(url);
         let res=await fetch(url);
         let data=await res.json();
         cont.innerHTML = "";
+        console.log("fetchCalled");
         data.forEach((det)=>{
-            console.log(wishlist);
             if(wishlist.includes(det.id))
           cont.append(createCards(det));
         })
@@ -28,6 +28,10 @@ async function fetchData(url){
     card.classList.add("c1");
     carousel.classList.add("carousel");
     details.classList.add("details");
+    let favbutton=document.createElement("button");
+    favbutton.innerHTML=`
+    <i class="fa-solid fa-trash" style="color: #445643;"></i>`
+    favbutton.classList.add("favorite-button");
     details.innerHTML=`
     <div id="info">
     <span>${det.name.slice(0, 20)+"..."}</span>
@@ -84,11 +88,35 @@ async function fetchData(url){
     </button>
   </div>`
     
-
+  favbutton.addEventListener("click",()=>{
+    removeFromWishlist(det.id);
+    fetchData(url);
+  })
+  async function removeFromWishlist(objId){
+    let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+    if(loggedIn){
+      let wishlist = loggedIn.wishlist;
+      loggedIn.wishlist = wishlist.filter((elem)=> elem != objId);
+      localStorage.setItem("loggedIn",JSON.stringify(loggedIn));
+      try{
+        await fetch(`https://tapti-recursion-010-v93f.onrender.com/users/${loggedIn.id}`, {
+          method:"PATCH",
+          headers:{
+            'Content-Type':'application/json',
+          },
+          body: JSON.stringify({"wishlist":wishlist})
+        })
+      }
+      catch(err){
+        console.log(err);
+      }
+    }
+  
+  }
   let carousalInner = carousel.querySelector(".carousel-inner");
   carousalInner.addEventListener("click", ()=>{gotoProducts(det.id)});
   details.addEventListener("click", ()=>{gotoProducts(det.id)});
-  card.append(carousel,details);
+  card.append(carousel,details,favbutton);
 
   return card;
 }
