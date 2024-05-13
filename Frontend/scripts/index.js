@@ -652,7 +652,7 @@ let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
 let userIcon = document.getElementById("userIcon");
 
 if(loggedIn){
-  userIcon.innerText = loggedIn.name[0];
+  userIcon.innerText = loggedIn.name[0].toUpperCase();
   console.log(userIcon.innerText);
   userIcon.classList.remove("material-icon");
   userIcon.style.borderRadius = "50%"
