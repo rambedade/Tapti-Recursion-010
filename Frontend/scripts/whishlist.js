@@ -120,6 +120,10 @@ async function fetchData(url){
 
   return card;
 }
+function gotoProducts(id){
+  localStorage.setItem("currCard", id);
+  window.location.assign("product.html")
+}
 
   
   fetchData(url);
