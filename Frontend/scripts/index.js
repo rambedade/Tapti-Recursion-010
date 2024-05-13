@@ -34,8 +34,12 @@ export function createCards(det){
     carousel.classList.add("carousel");
     details.classList.add("details");
     let favbutton=document.createElement("button");
+    let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
     favbutton.innerHTML=`
     <i class="fa-regular fa-heart fa-sm"></i>`
+    if(loggedIn && loggedIn.wishlist.includes(det.id)){
+      favbutton.innerHTML = `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`
+    }
     favbutton.classList.add("favorite-button");
     details.innerHTML=`
     <div id="info">
@@ -96,12 +100,12 @@ export function createCards(det){
 
   favbutton.addEventListener("click",()=>{
     if(favbutton.innerHTML != `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`){
-      favbutton.innerHTML = `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`
       addToWishlist(det.id);
+      favbutton.innerHTML = `<i class="fa-solid fa-heart" style="color: #ff0000;"></i>`
     }
     else{
-      favbutton.innerHTML = `<i class="fa-regular fa-heart fa-sm"></i>`
       removeFromWishlist(det.id);
+      favbutton.innerHTML = `<i class="fa-regular fa-heart fa-sm"></i>`
     }
   })
   let carousalInner = carousel.querySelector(".carousel-inner");
@@ -111,7 +115,27 @@ export function createCards(det){
 
   return card;
 }
+async function removeFromWishlist(objId){
+  let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
+  if(loggedIn){
+    let wishlist = loggedIn.wishlist;
+    loggedIn.wishlist = wishlist.filter((elem)=> elem != objId);
+    localStorage.setItem("loggedIn",JSON.stringify(loggedIn));
+    try{
+      await fetch(`https://tapti-recursion-010-v93f.onrender.com/users/${loggedIn.id}`, {
+        method:"PATCH",
+        headers:{
+          'Content-Type':'application/json',
+        },
+        body: JSON.stringify({"wishlist":wishlist})
+      })
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
 
+}
 async function addToWishlist(objId){
   let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
   if(loggedIn){
