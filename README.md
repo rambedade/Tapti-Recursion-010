@@ -102,11 +102,12 @@ https://youtu.be/W84hCffJtCs
 
 ## Features
 
-- Responsive and dynamic website
-- User authentication
-- Different Product Pages
-- Add property to favorites
-- Search and filter property using search param
+- **Responsiveness**: The website is responsive and dynamic.
+- **Authentication**: We have added User authentication  so new user can register and login.
+- **Product Page**:  Added product page on clicking the image cards
+- **Paginaton**: Added pagination feature so user can navigate from one page to another.
+- **Searching**: User can search and filter property using search parameter.
+- **Wishlist**: User can add resorts and homestays in the wishlist.
 
 
 ## Tech Stack
