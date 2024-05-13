@@ -609,11 +609,16 @@ span {
 /* Rameshwar Section */
 
 #gateways {
+ 
   background-color: rgb(246, 247, 246);
   padding-bottom: 40px;
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 60px;
 
+}
+#gateways>h2{
+  /* text-align: center; */
+  margin: 20px 0;
 }
 
 .dropdown {
