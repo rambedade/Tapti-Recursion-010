@@ -2,7 +2,7 @@ import { fetchIndexHTMl } from "./product.js";
 // import {createCards} from "./index.js"
 let url = "https://tapti-recursion-010-v93f.onrender.com/data?"
 let cont = document.getElementById("cards");
-// fetchIndexHTMl();
+fetchIndexHTMl();
 let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
 let wishlist = loggedIn.wishlist;
 async function fetchData(url){

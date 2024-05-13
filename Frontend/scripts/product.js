@@ -102,7 +102,7 @@ export async function fetchIndexHTMl(){
     let logoutLink = document.getElementById("logoutLink");
     let loggedIn = JSON.parse(localStorage.getItem("loggedIn"));
     let userIcon = document.getElementById("userIcon");
-    userIcon.innerText = "S";
+    userIcon.innerText = loggedIn.name[0];
     if(loggedIn){
         console.log(userIcon.innerText);
         userIcon.classList.remove("material-icon");

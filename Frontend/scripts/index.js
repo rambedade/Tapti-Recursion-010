@@ -4,9 +4,20 @@ const dropdownMenu = document.getElementById('dropdownMenu');
 let pages = document.getElementById("pages");
 let previous = document.getElementById("prev-page-button");
 let next = document.getElementById("next-page-button");
+let loading = document.getElementById("loading");
+
 menuIcon.addEventListener('click', function() {
   dropdownMenu.classList.toggle('show');
 });
+function showLoading(){
+  let img = document.createElement("img");
+  img.src = "assets/ZKZg.gif"
+  loading.append(img);
+}
+
+function stopLoading(){
+  loading.innerHTML = "";
+}
 
 // HIMANSHU------>>
 let cont=document.getElementById("cards")
@@ -129,6 +140,7 @@ async function addToWishlist(objId){
 var currPage = 1;
 var lastPage = 0;
 async function fetchData(page,url){
+  showLoading();
   try {
       console.log(url);
       let res=await fetch(url+`&_page=${page}&_limit=12`);
@@ -146,6 +158,7 @@ async function fetchData(page,url){
   } catch (error) {
       console.log(error);
   }
+  stopLoading();
 }
 // Rameshwar /
 

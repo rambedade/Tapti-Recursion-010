@@ -29,7 +29,7 @@
           </div>
           <div class="menu-flex">
               <div class="menus">
-                  <div class="item-menu" style="font: weight 600px;;">Stays</div>
+                  <div class="item-menu">Stays</div>
                    <div class="item-menu">Experiences</div>
                     <div class="item-menu">Online Experiences</div>
               </div>
@@ -58,31 +58,41 @@
       <div class="properties">
             <div class="search-bar">
               <form>
-             <div class="where">
-              <label>Where</label>
-              <input id="search-destination" type="text" placeholder="Search Destinations">
+             <div class="where search-bar-fields">
+              <div>
+                <label>Where</label>
+                <input id="search-destination" type="text" placeholder="Search Destinations">
+              </div>
              </div>
-             <div >
-             <label>Check in</label>
-             <input type="date"
+             <div class="search-bar-fields">
+             <div>
+
+               <label>Check in</label>
+               <input type="date"
                class="DatetimeLocal"
                min="2015-01-01T00:00"
                max="2025-12-31T23:59"
                step="1">
+              </div>
 
              </div>
-             <div>
-             <label>Check Out</label>
-             <input type="date"
-             class="DatetimeLocal"
-             min="2015-01-01T00:00"
-             max="2025-12-31T23:59"
-             step="1">
+             <div class="search-bar-fields">
+              <div>
+
+                <label>Check Out</label>
+                <input type="date"
+                class="DatetimeLocal"
+                min="2015-01-01T00:00"
+                max="2025-12-31T23:59"
+                step="1">
+              </div>
              </div>
-             <div>
-              <label>Who</label>
-              <input type="text" placeholder="Add Guests">
-             </div>
+             <div class="search-bar-fields">
+              <div>
+                <label>Who</label>
+                <input type="text" placeholder="Add Guests">
+              </div>
+            </div>
              <div>
              <button id="search-button" type="submit">
              <i class="fa-solid fa-magnifying-glass"></i>
@@ -256,7 +266,7 @@
         </div>
         
       
-      
+      <div id="loading"></div>
       <!--Himanshu-->
       <div id="cards"></div>
 
