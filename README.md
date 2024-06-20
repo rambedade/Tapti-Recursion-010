@@ -77,25 +77,8 @@ https://youtu.be/OTSghI5dd6U
 
 https://youtu.be/W84hCffJtCs
 
-## Usage
 
-## Login and Signup
 
-You can route to the login and signup page by either clicking the login or signup buttons in the dropdown menu or by clicking the login button on the prompt. On mobile view, the login page can be reached by clicking on the login button in the right-hand corner of the bottom nav bar.
-
-Once on the login page, you can log in or signup based on your choice. Currently, admin cannot sign up, and you must use the provided admin credentials if you wish to log in as admin:
-
-1. Enter a valid email and password to sign in. You may use the following credentials if you want:
-
-   - **Admin:**
-     - Username: `admin`
-     - Password: `admin`
-
-   - **User:**
-     - Email: `Madhu`
-     - Password: `madhu123`
-
-![image](https://github.com/rambedade/Tapti-Recursion-010/assets/54645464/79c6b7ac-61e3-470c-89d1-e93a795bb8a3)
 
 
 
